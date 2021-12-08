@@ -1,0 +1,48 @@
+header.header {
+	padding-top: 50px;
+	margin-bottom: 34px;
+}
+.logo {
+	text-align: center;
+	margin-bottom: 40px;
+
+	&-link {
+		display: inline-block;
+		text-transform: lowercase;
+		@include fz(42);
+		font-weight: 500;
+		color: #FFF;
+		transition: opacity .3s;
+
+		&:hover {
+			color: #FFF;
+			opacity: 0.7;
+		}
+	}
+}
+
+.navigation {
+	background-color: $bg2;
+	border-radius: 35px;
+
+	ul {
+		display: flex;
+		justify-content: space-evenly;
+	}
+	a {
+		display: block;
+		height: 70px;
+		line-height: 70px;
+		text-transform: uppercase;
+		padding: 0px 10px;
+		@include fz(15);
+		font-weight: 700;
+		color: #FFF;
+		transition: opacity .3s;
+
+		&:hover {
+			color: #FFF;
+			opacity: 0.7;
+		}
+	}
+}

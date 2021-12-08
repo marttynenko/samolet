@@ -1,0 +1,66 @@
+.gifts-slick {
+  margin-bottom: 54px;
+
+  &-item {
+    position: relative;
+
+    &-img {
+      border-radius: 50px;
+    }
+    &-btn {
+      position: absolute;
+      left: 8.5%;
+      bottom: 4%;
+    }
+  }
+}
+
+.holidays-air {
+  max-width: 1920px;
+  margin: 62px auto 60px;
+  background-color: #FFF;
+  border-radius: 250px;
+  padding: 30px 0;
+
+  &-body {
+    position: relative;
+    text-align: right;
+  }
+  &-schedule {
+    display: inline-block;
+    background-color: $bg2;
+    border-radius: 154px;
+    padding: 54px 120px;
+    @include fz(24);
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &-sticker {
+    display: inline-block;
+    vertical-align: baseline;
+    height: 77px;
+    line-height: 77px;
+    background-color: #fff;
+    color: $bg2;
+    border-radius: 38px;
+    padding: 0px 35px;
+    margin: 0px 15px;
+  }
+  &-santa {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translate(0,-50%);
+  }
+
+  @media (max-width: 1200px) {
+    &-santa {
+      left: 0;
+    }
+    &-schedule {
+      padding-left: 75px;
+      padding-right: 75px;
+    }
+  }
+}
