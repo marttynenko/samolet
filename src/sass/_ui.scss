@@ -1900,23 +1900,24 @@ img.slick-loading {
 	}
 }
 
-.iti--allow-dropdown input,
-.iti--allow-dropdown input[type=text],
-.iti--allow-dropdown input[type=tel],
-.iti--separate-dial-code input,
-.iti--separate-dial-code input[type=text],
-.iti--separate-dial-code input[type=tel] {
-	padding-left: 85px;
-}
-.iti__selected-flag {
-	padding-left: 25px;
-	padding-right: 10px;
-}
-.iti__arrow {
-	border: 0;
-	margin-left: 12px;
-	width: 14px;
-	height: 14px;
-	background: url(../images/svg/toggler.svg) center no-repeat;
-	background-size: 10px;
+
+.ui-header {
+	margin-bottom: 60px;
+	text-align: center;
+	@include fz(24);
+
+	&-title {
+		display: inline-block;
+		@include fz(48);
+		font-weight: 700;
+		margin-bottom: 30px;
+		padding: 45px 100px;
+		border-radius: 150px;
+		background: $bg2;
+		text-transform: uppercase;
+		letter-spacing: 1.5px;
+	}
+	&-txt {
+		font-weight: 500;
+	}
 }

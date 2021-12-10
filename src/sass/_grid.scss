@@ -78,5 +78,14 @@ $reverseBreakpoints: reverse($breakpoints);
         max-width: ($screen + ($col_gutter *2));
       }
     }
+
+    @if ($name == "lg") {
+      .inner, .container {
+        &-tight {
+          max-width: 1210px;
+        }
+      }
+    }
+
   }
 }
