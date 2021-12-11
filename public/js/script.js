@@ -38,56 +38,56 @@ $.fn.Tabs = function() {
 };
 
 
-//  jQuery.validator.setDefaults({
-//   errorClass: 'invalid',
-// 	successClass: 'valid',
-// 	focusInvalid: false,
-// 	errorElement: 'span',
-// 	errorPlacement: function (error, element) {
-//     if ( element.parent().hasClass('jq-checkbox') ||  element.parent().hasClass('jq-radio')) {
-//       element.closest('label').after(error);
+ jQuery.validator.setDefaults({
+  errorClass: 'invalid',
+	successClass: 'valid',
+	focusInvalid: false,
+	errorElement: 'span',
+	errorPlacement: function (error, element) {
+    if ( element.parent().hasClass('jq-checkbox') ||  element.parent().hasClass('jq-radio')) {
+      element.closest('label').after(error);
       
-//     } else if (element.parent().hasClass('jq-selectbox')) {
-//       element.closest('.jq-selectbox').after(error);
-//     } else {
-//       error.insertAfter(element);
-//     }
-//   },
-//   highlight: function(element, errorClass, validClass) {
-//     if ( $(element).parent().hasClass('jq-checkbox') ||  $(element).parent().hasClass('jq-radio') || $(element).parent().hasClass('jq-selectbox')) {
-//     	$(element).parent().addClass(errorClass).removeClass(validClass);
-//     } else {
-//     	$(element).addClass(errorClass).removeClass(validClass);
-//     }
-//   },
-//   unhighlight: function(element, errorClass, validClass) {
-//   	if ( $(element).parent().hasClass('jq-checkbox') ||  $(element).parent().hasClass('jq-radio') || $(element).parent().hasClass('jq-selectbox')) {
-//     	$(element).parent().removeClass(errorClass).addClass(validClass);
-//     } else {
-//     	$(element).removeClass(errorClass).addClass(validClass);
-//     }
-//   }
-// });
-// //дефолтные сообщения, предупреждения
-// jQuery.extend(jQuery.validator.messages, {
-//   required: "Majburiy maydon",
-//   email: "Noto'g'ri elektron pochta manzili",
-//   url: "Некорректный URL",
-//   number: "Некорректный номер",
-//   digits: "Это поле поддерживает только числа",
-//   equalTo: "Parollar mos kelmayapti",
-//   maxlength: jQuery.validator.format('Maksimal maydon uzunligi {0}'),
-//   minlength: jQuery.validator.format('Minimal maydon uzunligi	{0}'),
-//   require_from_group: jQuery.validator.format('Отметьте миниммум {0} из этих полей')
-// });
-// //кастомные методы валидатора
-// jQuery.validator.addMethod("lettersonly", function(value, element) {
-//   return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
-// }, "Только буквы");
+    } else if (element.parent().hasClass('jq-selectbox')) {
+      element.closest('.jq-selectbox').after(error);
+    } else {
+      error.insertAfter(element);
+    }
+  },
+  highlight: function(element, errorClass, validClass) {
+    if ( $(element).parent().hasClass('jq-checkbox') ||  $(element).parent().hasClass('jq-radio') || $(element).parent().hasClass('jq-selectbox')) {
+    	$(element).parent().addClass(errorClass).removeClass(validClass);
+    } else {
+    	$(element).addClass(errorClass).removeClass(validClass);
+    }
+  },
+  unhighlight: function(element, errorClass, validClass) {
+  	if ( $(element).parent().hasClass('jq-checkbox') ||  $(element).parent().hasClass('jq-radio') || $(element).parent().hasClass('jq-selectbox')) {
+    	$(element).parent().removeClass(errorClass).addClass(validClass);
+    } else {
+    	$(element).removeClass(errorClass).addClass(validClass);
+    }
+  }
+});
+//дефолтные сообщения, предупреждения
+jQuery.extend(jQuery.validator.messages, {
+  required: "Обязательное поле",
+  email: "Некорректный email",
+  url: "Некорректный URL",
+  number: "Некорректный номер",
+  digits: "Это поле поддерживает только числа",
+  equalTo: "Поля не совпадают",
+  maxlength: jQuery.validator.format('Максимальная длина поля {0} символа(ов)'),
+  minlength: jQuery.validator.format('Минимальная длина поля {0} символа(ов)'),
+  require_from_group: jQuery.validator.format('Отметьте миниммум {0} из этих полей')
+});
+//кастомные методы валидатора
+jQuery.validator.addMethod("lettersonly", function(value, element) {
+  return this.optional(element) || /^[a-zA-ZА-Яа-я\s]+$/i.test(value);
+}, "Только буквы");
 
-// jQuery.validator.addMethod("telephone", function(value, element) {
-//   return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/i.test(value);
-// }, "Yaroqsiz format"); 
+jQuery.validator.addMethod("telephone", function(value, element) {
+  return this.optional(element) || /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/i.test(value);
+}, "Некорректный формат"); 
 
 
 
@@ -176,6 +176,16 @@ jQuery(document).ready(function($){
 	$('.gifts-slick').slick({
 		dots: true,
 		arrows: false
+	})
+
+
+	$('#form_certificate').validate({
+		rules: {
+			mail: {
+				email: true,
+				required: true
+			}
+		}
 	})
 
 

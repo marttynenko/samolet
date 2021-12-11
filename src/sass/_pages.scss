@@ -345,3 +345,112 @@
     left: -188px;
   }
 }
+
+
+
+.certs {
+  background: #FFF url(../images/bgs/certs.png) center no-repeat;
+  background-size: contain;
+  color: #000;
+  padding: 110px 15px;
+
+  &-block {
+    position: relative;
+    z-index: 1;
+    background: #fff url(../images/bgs/hands.png) right 6% top 32% no-repeat;
+    padding: 80px 50px;
+    border-radius: 550px;
+    box-shadow: 0px 4px 41px rgba(0, 0, 0, 0.11);
+    max-width: 1510px;
+    margin: 0 auto;
+    @include fz(24);
+    text-align: center;
+
+    &-inner {
+      max-width: 865px;
+      margin: 0 auto;
+    }
+
+    &-bg-right {
+      position: absolute;
+      z-index: -1;
+      bottom: 65px;
+      left: -20px;
+    }
+  }
+  &-form {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto 80px;
+
+    &-field {
+      position: relative;
+      padding-right: 20px;
+      flex: 0 0 calc(100% - 267px);
+      max-width: calc(100% - 267px);
+      text-align: left;
+
+      .ui-field-label {
+        position: absolute;
+        left: 0;
+        top: -20px;
+      }
+      span.invalid {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &-opportunity {
+    padding: 52px 120px;
+    border-radius: 200px;
+    background-color: $bg2;
+    color: #FFF;
+
+    &-header {
+      margin-bottom: 40px;
+      font-weight: 500;
+    }
+    &-title {
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+    &-list {
+      max-width: 400px;
+      margin: 0 auto;
+      counter-reset: myCounter;
+
+      li {
+        position: relative;
+        padding-left: 70px;
+        margin-bottom: 30px;
+        text-align: left;
+
+        &:nth-of-type(even) {
+          margin-left: 25px;
+        }
+
+        &:before {
+          counter-increment: myCounter;
+          content: counter(myCounter);
+          display: inline-block;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          margin-top: -25px;
+          min-width: 50px;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          color: #FFF;
+          background: #C61E2F;
+          border-radius: 25px;
+          @include fz(36);
+        }
+      }
+    }
+  }
+}
