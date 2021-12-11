@@ -39,9 +39,9 @@ $devider: #d6d6d6;
 
 $valid: #25a670;
 
-$input_border: #D4D4D4;
+$input_border: #FFF;
 $input_hover: darken($input_border, 15%);
-$input_focus: $primary;
+$input_focus: darken($input_border, 20%);
 $input_shadow: #f6f6f6;
 $jq_border: #a3a3a3;
 $jq_hover: darken($jq_border,15%);
@@ -102,14 +102,14 @@ $btn_height_mini: 50px;
 $btn_paddings: 0px 40px;
 $btn_border_width: 0px;
 $btn_border_color: $primary;
-$btn_border_radius: 10px;
+$btn_border_radius: 8px;
 $btn_bg: #000;
 $btn_color: #FFF;
 
-$input_height: $btn_height;
-$input_paddings: 0px 25px;
+$input_height: 58px;
+$input_paddings: 0px 20px;
 $input_border_radius: $btn_border_radius;
-$input_bg: transparent;
+$input_bg: #FFF;
 
 $checkbox_size: 18px;
 $checkbox_border_radius: 2px;

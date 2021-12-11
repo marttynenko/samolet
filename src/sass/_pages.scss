@@ -149,3 +149,199 @@
     }
   }
 }
+
+
+.wall {
+  background-color: #9C292E;
+  padding-top: 100px;
+  padding-bottom: 110px;
+
+  &-header {
+    position: relative;
+    z-index: 1;
+
+    &-img {
+      position: absolute;
+      right: -10%;
+      top: -270px;
+      width: 430px;
+      z-index: -1;
+    }
+  }
+}
+.wall-cards {
+  margin-bottom: 130px;
+
+  &-pgn {
+    &-wrap {
+      display: inline-block;
+      position: relative;
+    }
+
+    &-santa {
+      position: absolute;
+      left: 100%;
+      margin-left: 60px;
+      top: 50%;
+      transform: translate(0,-53%);
+      width: 407px;
+    }
+  }
+}
+.wall-card {
+  margin-bottom: 30px;
+  min-height: calc(100% - 30px);
+  perspective: 1000px;
+  display: flex;
+
+  &-inner {
+    position: relative;
+    width: 100%;
+    // height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  &-front,
+  &-back {
+    backface-visibility: hidden;
+    border-radius: 200px;
+  }
+  &-front {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #C61E2F url(../images/snowflake@2x.png) center no-repeat;
+    background-size: auto 200px;
+  }
+
+  &-back {
+    background: #FFF;
+    transform: rotateY(180deg);
+    color: #000;
+    padding: 70px 40px 55px 100px;
+    min-height: 100%;
+  }
+
+  &:hover {
+    .wall-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  &-short {
+    margin-bottom: 10px;
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  &-who {
+    @include fz(16);
+    font-weight: 600;
+    text-transform: uppercase;
+    background: -webkit-linear-gradient(0deg, #569345, #2B5A1C);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &-ghostleft {
+    position: absolute;
+    left: -100%;
+    margin-left: -30px;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #C61E2F url(../images/snowflake@2x.png) center no-repeat;
+    background-size: auto 200px;
+    border-radius: 200px;
+    opacity: 0.5;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(270deg, rgba(198,30,47,0.59) 0%, rgb(156,40,46) 100%)
+    }
+  }
+  &-ghostright {
+    position: absolute;
+    right: -100%;
+    margin-right: -30px;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #C61E2F url(../images/snowflake@2x.png) center no-repeat;
+    background-size: auto 200px;
+    border-radius: 200px;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: linear-gradient(270deg, rgb(156,40,46) 0%, rgba(198,30,47,0.59) 100%);
+    }
+  }
+}
+
+.pgn-btn {
+  display: inline-block;
+  vertical-align: middle;
+  height: 120px;
+  line-height: 120px;
+  padding: 0px 70px;
+  border-radius: 60px;
+  background: linear-gradient(90deg, #4D863C 0.08%, #2A571B 100.08%);
+  color: #FFF;
+  @include fz(18);
+  font-weight: 700;
+  transition: box-shadow .2s;
+
+  svg {
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+    position: relative;
+    top: -1px;
+  }
+  &:hover {
+    color: #FFF;
+    box-shadow: 0px 0px 0px 5px rgba(#FFF,.35);
+  }
+}
+
+.wall-form {
+  max-width: 512px;
+  margin: 0 auto;
+  position: relative;
+
+  .ui-field {
+    margin-bottom: 12px;
+  }
+  .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  [class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  &-bg {
+    position: absolute;
+    width: 340px;
+    // z-index: -1;
+    top: -80px;
+    left: -188px;
+  }
+}

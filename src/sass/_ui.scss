@@ -576,9 +576,8 @@ span.invalid {
 		top: 100%;
 	}
 
-	.iti {
-		display: block;
-		width: 100%;
+	&-btn {
+		padding-top: 15px;
 	}
 }
 .error-field {
@@ -604,10 +603,10 @@ span.invalid {
 }
 
 
-::-webkit-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
-::-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
-:-moz-placeholder {opacity: 1; transition: opacity 0.3s ease;}
-:-ms-input-placeholder {opacity: 1; transition: opacity 0.3s ease;}
+::-webkit-input-placeholder {opacity: 1; transition: opacity 0.3s ease; color: #C9DAEC;}
+::-moz-placeholder {opacity: 1; transition: opacity 0.3s ease; color: #C9DAEC;}
+:-moz-placeholder {opacity: 1; transition: opacity 0.3s ease; color: #C9DAEC;}
+:-ms-input-placeholder {opacity: 1; transition: opacity 0.3s ease; color: #C9DAEC;}
 :focus::-webkit-input-placeholder {opacity: 0;}
 :focus::-moz-placeholder {opacity: 0;}
 :focus:-moz-placeholder {opacity: 0;}
@@ -772,12 +771,12 @@ span.invalid {
 }
 
 .ui-field {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 
 	&-label {
 		display: block;
-		@include fz(18);
-		margin-bottom: 15px;
+		@include fz(11);
+		margin-bottom: 8px;
 		font-weight: 400;
 		color: $font;
 	}
@@ -1919,5 +1918,39 @@ img.slick-loading {
 	}
 	&-txt {
 		font-weight: 500;
+	}
+}
+.ui-title {
+	@include fz(48);
+	font-weight: 700;
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+
+.ui-centered {
+	text-align: center !important;
+}
+
+.ui-btn-imaged {
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	padding: 0px 25px;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: 700;
+	color: #000;
+	@include fz(20);
+
+	&-txt {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		max-width: calc(100% - 50px);
 	}
 }
