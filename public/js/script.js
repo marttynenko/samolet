@@ -236,7 +236,7 @@ jQuery(document).ready(function($){
 			items: { src: a.attr('data-href') },
 			type: 'ajax',    
 			overflowY: 'scroll',
-			removalDelay: 300,
+			removalDelay: 800,
 			mainClass: 'my-mfp-zoom-in',
 			ajax: {
 				tError: 'Error. Not valid url',
@@ -244,8 +244,8 @@ jQuery(document).ready(function($){
 			callbacks: {
 				ajaxContentAdded: function () {
 					setTimeout(function(){
-						$('.mfp-wrap, .mfp-bg').addClass('delay-back');
-						$('.mfp-popup').addClass('delay-back');
+						$('.mfp-wrap, .mfp-bg').addClass('not_delay');
+						$('.mfp-popup').addClass('not_delay');
 					},700);
 				}
 			}

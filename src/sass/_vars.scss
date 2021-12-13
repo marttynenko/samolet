@@ -28,8 +28,8 @@ $green: #27AE60;
 $dark: #171717;
 
 $link: #FFF;
-$link_hover: $primary_hover;
-$link_active: $primary_active;
+$link_hover: #eee;
+$link_active: darken($link_hover,5%);
 $link_border: $primary_hover;
 $link_border_hover: transparent;
 
@@ -93,22 +93,22 @@ $article_font_weight: $weight;
 
 
 // Buttons & Inputs ---
-$btn_font_size: 18;
-$btn_font_weight: 600;
+$btn_font_size: 20;
+$btn_font_weight: 700;
 $btn_text_transform: none;
-$btn_height: 62px;
+$btn_height: 96px;
 $btn_height_big: 70px;
-$btn_height_mini: 50px;
-$btn_paddings: 0px 40px;
+$btn_height_mini: 60px;
+$btn_paddings: 0px 45px;
 $btn_border_width: 0px;
-$btn_border_color: $primary;
-$btn_border_radius: 8px;
-$btn_bg: #000;
-$btn_color: #FFF;
+$btn_border_color: #FFF;
+$btn_border_radius: 50px;
+$btn_bg: #FFF;
+$btn_color: #000;
 
 $input_height: 58px;
 $input_paddings: 0px 20px;
-$input_border_radius: $btn_border_radius;
+$input_border_radius: 8px;
 $input_bg: #FFF;
 
 $checkbox_size: 18px;

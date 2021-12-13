@@ -74,7 +74,7 @@ h6, .h6 { font-size: 18px; font-size: 1.125rem; text-transform: none; font-weigh
 
 a { color: #FFF; text-decoration: none; outline: none; -webkit-transition: color .4s, border .4s; -o-transition: color .4s, border .4s; transition: color .4s, border .4s; }
 
-a:hover { text-decoration: none; color: #802226; }
+a:hover { text-decoration: none; color: #eee; }
 
 a:active { color: #B0B0B0; }
 
@@ -183,7 +183,7 @@ button, input, optgroup, select, textarea { font-family: "CoFo Sans"; font-weigh
 
 .ui-input.wide, input.ui-input.wide, textarea.ui-input.wide, select.ui-input.wide { width: 100%; }
 
-.ui-input.mini, input.ui-input.mini, textarea.ui-input.mini, select.ui-input.mini { height: 50px; }
+.ui-input.mini, input.ui-input.mini, textarea.ui-input.mini, select.ui-input.mini { height: 60px; }
 
 .ui-input.big, input.ui-input.big, textarea.ui-input.big, select.ui-input.big { height: 70px; }
 
@@ -275,23 +275,23 @@ span.invalid { padding-top: 3px; }
 
 .valid:-ms-input-placeholder { color: #25a670; }
 
-.ui-btn { display: inline-block; vertical-align: middle; max-width: 100%; height: 62px; line-height: 62px; white-space: nowrap; text-align: center; padding: 0px 40px; border-radius: 8px; background-color: #000; border: 0px solid #000; font-family: "CoFo Sans"; color: #FFF; text-transform: none; font-size: 18px; font-size: 1.125rem; font-weight: 600; -webkit-transition: background .3s, color .3s, -webkit-box-shadow .3s; transition: background .3s, color .3s, -webkit-box-shadow .3s; -o-transition: box-shadow .3s, background .3s, color .3s; transition: box-shadow .3s, background .3s, color .3s; transition: box-shadow .3s, background .3s, color .3s, -webkit-box-shadow .3s; cursor: pointer; outline: none; }
+.ui-btn { display: inline-block; vertical-align: middle; max-width: 100%; height: 96px; line-height: 96px; white-space: nowrap; text-align: center; padding: 0px 45px; border-radius: 50px; background-color: #FFF; border: 0px solid #FFF; font-family: "CoFo Sans"; color: #000; text-transform: none; font-size: 20px; font-size: 1.25rem; font-weight: 700; -webkit-transition: background .3s, color .3s, -webkit-box-shadow .3s; transition: background .3s, color .3s, -webkit-box-shadow .3s; -o-transition: box-shadow .3s, background .3s, color .3s; transition: box-shadow .3s, background .3s, color .3s; transition: box-shadow .3s, background .3s, color .3s, -webkit-box-shadow .3s; cursor: pointer; outline: none; }
 
 .ui-btn svg.ui-btn-svg { display: inline-block; vertical-align: middle; margin-right: 8px; width: 18px; height: 18px; position: relative; top: -2px; }
 
-.ui-btn:hover { background-color: #1C1C1C; border-color: #1C1C1C; color: #FFF; text-decoration: none; }
+.ui-btn:hover { background-color: #FFF; border-color: #FFF; color: #9C292E; text-decoration: none; }
 
-.ui-btn:active { background-color: #303030; border-color: #303030; }
+.ui-btn:active { background-color: #ebebeb; border-color: #ebebeb; }
 
 .ui-btn + .ui-btn { margin-left: 7px; }
 
 .ui-btn-block { display: block; width: 100%; margin-left: 0 !important; margin-bottom: 10px; padding: 0px 5px !important; }
 
-.ui-btn-mini { font-size: 14px; font-size: 0.875rem; font-weight: 400; padding: 0px 25px; height: 50px; line-height: 50px; }
+.ui-btn-mini { font-size: 14px; font-size: 0.875rem; font-weight: 400; padding: 0px 25px; height: 60px; line-height: 60px; }
 
 .ui-btn-big { height: 70px; line-height: 70px; font-size: 18px; padding: 0px 60px; }
 
-.ui-btn-bordered { background-color: transparent; border: 1px solid #FFF; line-height: 62px; color: #FFF; }
+.ui-btn-bordered { background-color: transparent; border: 1px solid #FFF; line-height: 96px; color: #FFF; }
 
 .ui-btn-bordered:hover { background-color: transparent; border-color: rgba(28, 28, 28, 0.5); color: rgba(28, 28, 28, 0.5); }
 
@@ -1181,11 +1181,13 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
   .mfp-arrow-right { -webkit-transform-origin: 100%; -ms-transform-origin: 100%; transform-origin: 100%; }
   .mfp-container { padding-left: 6px; padding-right: 6px; } }
 
-.mfp-popup { background: #C61E2F; position: relative; padding: 100px 50px 65px; min-height: 415px; width: 96%; max-width: 938px; margin: 20px auto; text-align: center; }
+.mfp-popup { background: #C61E2F; position: relative; padding: 100px 50px 65px; min-height: 415px; width: 96%; max-width: 938px; margin: 20px auto; text-align: center; font-size: 16px; font-size: 1rem; }
 
 .mfp-popup-header { margin-bottom: 25px; text-align: center; }
 
 .mfp-popup-title { display: inline-block; padding: 18px 55px; background: #9C292E; color: #FFF; border-radius: 150px; font-size: 24px; font-size: 1.5rem; font-weight: 700; }
+
+.mfp-popup-msg { margin-bottom: 30px; }
 
 .mfp-popup-inner { max-width: 600px; margin: 0 auto; }
 
@@ -1207,7 +1209,29 @@ img.mfp-img { width: auto; max-width: 100%; height: auto; display: block; line-h
 
 .popup-advantages-inner { max-width: 560px; }
 
-.mfp-bg { position: fixed !important; height: 100% !important; background: rgba(255, 255, 255, 0.9); -webkit-backdrop-filter: blur(7px); backdrop-filter: blur(7px); }
+.popup-disposition { padding-top: 65px; }
+
+.popup-disposition-inner { max-width: 507px; }
+
+.popup-disposition-actions p { margin-bottom: 20px; }
+
+.popup-disposition-charity { position: relative; display: inline-block; padding-left: 24px; }
+
+.popup-disposition-charity span { border-bottom: 1px solid #FFF; }
+
+.popup-disposition-charity:before { content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; background: url(../images/svg/charity.svg) center no-repeat; background-size: contain; }
+
+.popup-congratulate { padding-top: 65px; }
+
+.popup-congratulate-code { display: inline-block; background: #FFF; padding: 14px 35px; border-radius: 10px; margin-bottom: 38px; font-size: 30px; font-size: 1.875rem; text-transform: uppercase; color: #000; }
+
+.popup-thanks { padding-top: 65px; }
+
+.popup-thanks-inner { max-width: 540px; }
+
+.popup-accepted-inner { max-width: 420px; }
+
+.mfp-bg { position: fixed !important; height: 100% !important; background: rgba(255, 255, 255, 0.99); }
 
 .mfp-container { padding: 0; }
 
@@ -1268,21 +1292,22 @@ button.mfp-close:hover:after { -webkit-transform: rotate(-135deg); -ms-transform
 /* MFP Animations
 ---------------------------*/
 /* start state */
-.my-mfp-zoom-in .zoom-anim-dialog { opacity: 0; -webkit-transition: all .3s .45s ease-in-out; -o-transition: all .3s .45s ease-in-out; transition: all .3s .45s ease-in-out; -webkit-transform: scale(0.75); -ms-transform: scale(0.75); transform: scale(0.75); }
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog { opacity: 0; -webkit-transition: all .3s .45s ease-in-out; -o-transition: all .3s .45s ease-in-out; transition: all .3s .45s ease-in-out; -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); }
 
-.delay_back .my-mfp-zoom-in .zoom-anim-dialog, .my-mfp-zoom-in .zoom-anim-dialog.delay_back { -webkit-animation-delay: 0s !important; animation-delay: 0s !important; -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; }
+.not_delay .my-mfp-zoom-in .zoom-anim-dialog, .my-mfp-zoom-in .zoom-anim-dialog.not_delay { -webkit-animation-delay: 0s !important; animation-delay: 0s !important; -webkit-transition: all .3s 0s ease-in-out; -o-transition: all .3s 0s ease-in-out; transition: all .3s 0s ease-in-out; }
 
 /* animate in */
 .my-mfp-zoom-in.mfp-ready .zoom-anim-dialog { opacity: 1; -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); }
 
 /* animate out */
-.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog { -webkit-transform: scale(0.75); -ms-transform: scale(0.75); transform: scale(0.75); opacity: 0; }
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog { -webkit-transform: scale(0.9); -ms-transform: scale(0.9); transform: scale(0.9); opacity: 0; }
 
 /* Dark overlay, start state */
-.mfp-bg { opacity: 0; -webkit-transition: opacity 0.3s ease; -o-transition: opacity 0.3s ease; transition: opacity 0.3s ease; }
+.mfp-bg { opacity: 0.75; -webkit-transform: scale(0.95); -ms-transform: scale(0.95); transform: scale(0.95); -webkit-transition: opacity 0.3s ease, -webkit-transform 0.3s ease; transition: opacity 0.3s ease, -webkit-transform 0.3s ease; -o-transition: opacity 0.3s ease, transform 0.3s ease; transition: opacity 0.3s ease, transform 0.3s ease; transition: opacity 0.3s ease, transform 0.3s ease, -webkit-transform 0.3s ease; }
 
 /* animate in */
-.mfp-bg.mfp-ready { opacity: 0.9; }
+.mfp-bg.mfp-ready { -webkit-transform: scale(1); -ms-transform: scale(1); transform: scale(1); opacity: 0.95; }
 
 /* animate out */
 .mfp-removing.mfp-bg { opacity: 0; }

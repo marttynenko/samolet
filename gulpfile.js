@@ -41,6 +41,8 @@ const compressImages = async () => {
             [
                 './src/images/examples/**/*',
                 './src/images/plugs/**/*',
+                './src/images/audio/**/*',
+                './src/images/popups/**/*',
                 './src/images/bgs/**/*',
                 './src/images/bgs/**/*',
                 './src/images/*.jpg',
