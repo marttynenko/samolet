@@ -5,274 +5,93 @@
 
 
 .mfp-popup {
-  background: #FFF;
+  background: $bg;
   position: relative;
-  padding: 35px 35px 25px;
-  border-radius: 20px;
+  padding: 100px 50px 65px;
+  min-height: 415px;
   width: 96%;
-  max-width: 570px;
+  max-width: 938px;
   margin: 20px auto;
-  overflow: hidden;
-  box-shadow: 0px 0px 5px -1px rgba(#CCC,.2);
+  text-align: center;
 
-  &-title {
-    margin: -35px -35px 35px;
-    padding: 25px 55px 25px 35px;
-    @include fz(20);
-    font-weight: 600;
-    border-bottom: 2px solid #000;
-  }
-
-  @media (max-width: 480px) {
-    padding-left: 25px;
-    padding-right: 25px;
-
-    &-title {
-      margin-left: -25px;
-      margin-right: -25px;
-      padding-left: 25px;
-    }
-  }
-}
-
-.popup-crop {
-  max-width: 430px;
-  padding: 30px;
-
-  &-title {
-    @include fz(20);
-    margin-bottom: 15px;
-    font-weight: 600;
-    padding-right: 20px;
-    padding-right: 30px;
-  }
-
-  &-hint {
-    @include fz(18);
-    margin-bottom: 35px;
-  }
-
-  &-block {
-    margin-bottom: 35px;
-  }
-
-  &-btns {
-    .ui-btn-block {
-      margin-bottom: 20px;
-    }
-  }
-
-  &-upload {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    @include fz(16);
-    font-weight: 600;
-
-    input {
-      position: absolute;
-      opacity: 0;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  button.mfp-close {
-    top: 33px !important;
-    right: 30px;
-  }
-
-  .cropper-point {
-    background: #FFF;
-  }
-  .cropper-line {
-    background-color: #FFF;
-  }
-  .cropper-view-box {
-    outline-color: #FFF;
-    outline: 1px solid #fdfdfd;
-  }
-}
-
-.popup-access {
-  &-btns {
-    .ui-btn-block {
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
-  }
-}
-
-.popup-auth {
-  a {
-    color: $font;
-
-    &:hover {
-      color: $primary;
-    }
-  }
-
-  &-btns {
-    display: flex;
-    align-items: center;
+  &-header {
     margin-bottom: 25px;
+    text-align: center;
   }
 
-  &-submit {
-    flex: 0 0 calc(100% - 120px);
-    max-width: calc(100% - 120px);
+  &-title {
+    display: inline-block;
+    padding: 18px 55px;
+    background: $bg2;
+    color: #FFF;
+    border-radius: 150px;
+    @include fz(24);
+    font-weight: 700;
   }
 
-  &-remember {
-    padding-left: 15px;
-    flex: 0 0 120px;
-    max-width: 1200px;
-    margin-bottom: 10px;
-    text-align: right;
-
-    @media (min-width: 480px) {
-      &-link {
-        display: inline-block;
-        text-align: left;
-      }
-    }
+  &-inner {
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  &-register {
-    margin-bottom: 35px;
+  &-bg {
+    position: absolute;
+    line-height: 0;
+    z-index: -1;
+    max-width: 45%;
 
-    &-link {
-      font-weight: 600;
-    }
-  }
-
-  &-socials {
-    margin: 0px -35px;
-    border-top: 1px solid $border;
-    padding: 20px 20px 0;
-    font-size: 0;
-
-    &-link {
-      display: inline-block;
-      vertical-align: middle;
-      width: 48px;
-      height: 48px;
-      margin: 0px 10px;
-      transition: opacity .2s;
-
-      &:hover {
-        opacity: 0.75;
-      }
-    }
-  }
-
-  @media (max-width: 480px) {
-    &-btns {
+    img {
       display: block;
     }
-
-    &-submit {
-      margin-bottom: 30px;
-      max-width: 100%;
-    }
-    
-    &-remember {
-      text-align: center;
-      max-width: 100%;
-
-    }
+  }
+  &-snowflake {
+    top: 0;
+    left: 0;
+    max-width: 25%;
+  }
+  &-santa {
+    right: 0;
+    bottom: 0;
+  }
+  &-rocker {
+    right: 25px;
+    bottom: 25px;
+  }
+  &-lollypop {
+    left: 20px;
+    top: 20px;
+  }
+  &-cert {
+    bottom: 0;
+    right: 15px;
   }
 }
 
-.popup-pay {
-  &-products,
-  &-total {
-    margin-bottom: 38px;
-    position: relative;
-
-    &:after {
-      content: "";
-      position: absolute;
-      left: -35px;
-      right: -35px;
-      bottom: 0;
-      height: 1px;
-      background: $border_light;
-    }
-  }
-
-  &-product {
-    position: relative;
-    padding-right: 35px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding-bottom: 38px;
-    @include fz(18);
-
-    @media (max-width: 400px) {
-      @include fz(16);
-    }
-
-    a {
-      color: $font;
-
-      &:hover {
-        color: $primary;
-      }
-    }
-
-    &-title {
-      width: 100%;
-      max-width: 290px;
-      padding-right: 20px;
-    }
-
-    &-price {
-      font-weight: 700;
-      text-align: center;
-      white-space: nowrap;
-
-      @media (min-width: 576px) {
-        flex: 0 0 120px;
-        max-width: 120px;
-      }
-    }
-
-    &-remove {
-      position: absolute;
-      right: -4px;
-      top: 2px;
-      padding: 4px;
-      width: 22px;
-      cursor: pointer;
-
-      svg {
-        width: 14px;
-        height: 14px;
-      }
-    }
-  }
-
-  &-total {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: 700;
-    @include fz(18);
-    padding-bottom: 38px;
+.popup-noemail,
+.popup-certused  {
+  &-inner {
+    max-width: 490px;
   }
 }
+
+.popup-advantages {
+  &-inner {
+    max-width: 560px;
+  }
+}
+
+
+  
+
+
 
 
 
 .mfp-bg {
   position: fixed !important;
   height: 100% !important;
-  background: rgba(233, 233, 233, 0.85);
-  backdrop-filter: blur(15px);
+  background: rgba(#FFF, 0.9);
+  backdrop-filter: blur(7px);
 }
 // .mfp-wrap {
 //   top: 0px !important;
@@ -302,12 +121,13 @@ button.mfp-close {
   font-size: 0;
   text-indent: -9999px;
   overflow: hidden;
-  top: 25px !important;
-  right: 35px;
-  width: 20px;
-  height: 20px;
-  min-width: 20px;
-  background: none;
+  top: -25px !important;
+  right: -25px;
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background-color: $bg2;
+  border-radius: 50%;
   border: 0 !important;
   padding: 0 !important;
   cursor: pointer;
@@ -319,9 +139,9 @@ button.mfp-close {
     height: 2px;
     top: 50%;
     margin-top: -1px;
-    left: 0;
-    right: 0;
-    background: #000;
+    left: 10px;
+    right: 10px;
+    background: #FFF;
     border-radius: 1px;
     -webkit-transition: transform .35s, background .35s;
     -moz-transition: transform .35s, background .35s;
@@ -339,7 +159,7 @@ button.mfp-close {
   }
   &:hover {
     &:before, &:after {
-      background: $primary;
+      background: #000;
     }
     &:before {
       // @include transform(rotate(135deg));
@@ -478,8 +298,8 @@ button.mfp-close {
   -o-transform: scale(0.75); 
   transform: scale(0.75);
 }
-.not_delay .my-mfp-zoom-in .zoom-anim-dialog,
-.my-mfp-zoom-in .zoom-anim-dialog.not_delay {
+.delay_back .my-mfp-zoom-in .zoom-anim-dialog,
+.my-mfp-zoom-in .zoom-anim-dialog.delay_back {
   animation-delay: 0s !important;
    -webkit-transition: all .3s 0s ease-in-out; 
   -moz-transition: all .3s 0s ease-in-out; 

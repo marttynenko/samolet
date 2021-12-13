@@ -156,36 +156,56 @@
       <div class="wall-form-bg">
         <img src="./images/wreath_angle.png" srcset="./images/wreath_angle@2x.png 2x" alt="alt">
       </div>
-      <form>
+      <form class="to_wall_form">
         <div class="ui-field">
           <label for="achievs" class="ui-field-label">Ваши достижения</label>
-          <textarea name="" id="" rows="5" class="ui-input" name="txt" placeholder="Вам есть чем гордиться, расскажите об этом!"></textarea>
+          <textarea name="msg" required id="" rows="5" class="ui-input" name="txt" placeholder="Вам есть чем гордиться, расскажите об этом!"></textarea>
         </div>
 
         <div class="row">
           <div class="col-sm-6">
             <div class="ui-field">
               <label for="name" class="ui-field-label">Ваше имя</label>
-              <input type="text" name="name" class="ui-input" placeholder="Введите свое имя">
+              <input type="text" required name="name" class="ui-input" placeholder="Введите свое имя">
             </div>
           </div>
 
           <div class="col-sm-6">
             <div class="ui-field">
-              <label for="name" class="ui-field-label">Ваша фамилия</label>
-              <input type="text" class="ui-input" name="lastname" placeholder="Введите свою фамилию">
+              <label for="lastname" class="ui-field-label">Ваша фамилия</label>
+              <input type="text" required class="ui-input" name="lastname" placeholder="Введите свою фамилию">
             </div>
           </div>
         </div>
 
         <div class="ui-field-btn ui-centered">
-          <a href="#" class="ui-btn-imaged">
+          <button type="submit" class="ui-btn-imaged">
             <img src="./images/btn-imaged.png" srcset="./images/btn-imaged@2x.png 2x" alt="Отправить на стену" class="ui-btn-imaged-img">
             <span class="ui-btn-imaged-txt">Отправить на стену</span>
-          </a>
+          </button>
         </div>
       </form>
     </div>
+
+    <script>
+      function ValidateFormWall() {
+        $('form.to_wall_form').validate({
+          rules: {
+            msg: {
+              minlength: 25
+            },
+            name: {
+              lettersonly: true
+            },
+            lastname: {
+              lettersonly: true
+            }
+          }
+        })
+      }
+      
+      window.addEventListener('DOMContentLoaded',() => jQuery(document).ready(ValidateFormWall))
+    </script>
 
   </div><!--.inner-->
 </div><!--.wall-->
@@ -204,10 +224,10 @@
           <div class="certs-form-flex flex valign-center">
             <div class="certs-form-field">
               <label for="mail" class="ui-field-label">Ваш рабочий email</label>
-              <input type="email" class="ui-input" name="mail" required placeholder="Введите ваш e-mail">
+              <input type="email" class="ui-input" name="mail" placeholder="Введите ваш e-mail">
             </div>
             <div class="certs-form-btn">
-              <button type="button" class="ui-btn-imaged">
+              <button type="submit" class="ui-btn-imaged">
                 <img src="./images/btn-imaged.png" srcset="./images/btn-imaged@2x.png 2x" alt="Получить сертификат" class="ui-btn-imaged-img">
                 <span class="ui-btn-imaged-txt">Получить сертификат</span>
               </button>
@@ -215,6 +235,21 @@
           </div>
         </form>
       </div>
+
+      <script>
+        function ValidateFormCert() {
+          $('#form_certificate').validate({
+            rules: {
+              mail: {
+                email: true,
+                required: true
+              }
+            }
+          })
+        }
+        
+        window.addEventListener('DOMContentLoaded',() => jQuery(document).ready(ValidateFormCert))
+      </script>
 
       <div class="certs-opportunity-header">
         Но, только в этом году у тебя появилось несколько новых возможностей распорядиться своим сертификатом.
@@ -236,6 +271,80 @@
     </div>
   </div>
 </div><!--.certs-->
+
+
+<div class="podcasts">
+  <div class="inner inner-tight">
+    <div class="podcasts-header ui-header">
+      <div class="ui-header-title">Корпоративный Подкаст <br>
+        «Это работает»</div>
+      <div class="ui-header-txt">
+        <p>Хочешь получить новые знания, пока стоишь в пробке, выбираешь подарки или тренируешься на беговой дорожке? Добро пожаловать в рубрику «Подкасты».</p>
+        <p>На связи группа внутренних коммуникаций Самолета и ее руководитель — Софья Старцева с подкастом «Это работает»: всё об успехе и пути к нему. Начни Новый год правильно: иногда нужные слова, услышанные вовремя, могут круто перевернуть твой мир.</p>
+      </div>
+      <div class="podcasts-header-icon"><img src="./images/leaf.png" srcset="./images/leaf@2x.png 2x" alt="alt"></div>
+    </div>
+
+    <div class="podcasts-slider-wrp">
+      <div class="podcasts-slider swiper">
+        <div class="swiper-wrapper">
+          <div class="podcasts-slider-slide swiper-slide">
+            <div class="podcasts-card">
+              <img src="//via.placeholder.com/604x395" alt="alt" class="podcasts-card-img">
+              <div class="podcasts-card-play" data-source="//stream.radiojar.com/hcrb063nn3quv"></div>
+            </div>
+          </div>
+
+          <div class="podcasts-slider-slide swiper-slide">
+            <div class="podcasts-card">
+              <img src="//via.placeholder.com/604x395/00FF00/FFF" alt="alt" class="podcasts-card-img">
+              <div class="podcasts-card-play" data-source="//cast.radiogroup.com.ua:8000/retro"></div>
+            </div>
+          </div>
+
+          <div class="podcasts-slider-slide swiper-slide">
+            <div class="podcasts-card">
+              <img src="//via.placeholder.com/604x395/0000FF/FFF" alt="alt" class="podcasts-card-img">
+              <div class="podcasts-card-play" data-source="//stream.radiojar.com/hcrb063nn3quv"></div>
+            </div>
+          </div>
+
+          <div class="podcasts-slider-slide swiper-slide">
+            <div class="podcasts-card">
+              <img src="//via.placeholder.com/604x395/000/FFF" alt="alt" class="podcasts-card-img">
+              <div class="podcasts-card-play" data-source="//cast.radiogroup.com.ua:8000/retro"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next podcasts-slider-next"></div>
+      <div class="swiper-button-prev podcasts-slider-prev"></div>
+      <img src="./images/lollypop.png" srcset="./images/lollypop@2x.png 2x"  alt="alt" class="podcasts-slider-icon">
+    </div>
+    
+    <audio controls id="podcasts_audio" class="podcasts-audio" src="">
+    </audio>
+
+    <div class="podcasts-services">
+      <div class="podcasts-services-label">Мы на аудио площадках  —</div>
+      <div class="podcasts-services-items">
+        <a href="#" class="podcasts-services-item">
+          <img src="./images/audio/cast-1.png" srcset="./images/audio/cast-1@2x.png 2x" alt="apple music">
+        </a>
+        <a href="#" class="podcasts-services-item">
+          <img src="./images/audio/cast-2.png" srcset="./images/audio/cast-2@2x.png 2x" alt="spotify">
+        </a>
+        <a href="#" class="podcasts-services-item">
+          <img src="./images/audio/cast-4.png" srcset="./images/audio/cast-4@2x.png 2x" alt="google music">
+        </a>
+        <a href="#" class="podcasts-services-item">
+          <img src="./images/audio/cast-3.png" srcset="./images/audio/cast-3@2x.png 2x" alt="yandex music">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
 

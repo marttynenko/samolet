@@ -571,12 +571,6 @@ span.invalid {
 .ui-field {
 	position: relative;
 
-	span.invalid {
-		position: absolute;
-		left: 0;
-		top: 100%;
-	}
-
 	&-btn {
 		padding-top: 15px;
 	}
@@ -1903,7 +1897,6 @@ img.slick-loading {
 
 .ui-header {
 	margin-bottom: 60px;
-	text-align: center;
 	@include fz(24);
 
 	&-title {
@@ -1914,8 +1907,11 @@ img.slick-loading {
 		padding: 45px 100px;
 		border-radius: 150px;
 		background: $bg2;
-		text-transform: uppercase;
 		letter-spacing: 1.5px;
+
+		@media (min-width: 1360px) {
+			margin-left: -100px;
+		}
 	}
 	&-txt {
 		font-weight: 500;
@@ -1926,7 +1922,6 @@ img.slick-loading {
 	font-weight: 700;
 	font-weight: 700;
 	margin-bottom: 30px;
-	text-transform: uppercase;
 	letter-spacing: 1.5px;
 }
 

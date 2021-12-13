@@ -454,3 +454,163 @@
     }
   }
 }
+
+
+.podcasts {
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  &-header {
+    max-width: 1060px;
+    position: relative;
+
+    &-icon {
+      position: absolute;
+      top: -50px;
+      right: -150px;
+      z-index: -1;
+    }
+  }
+}
+
+.podcasts-slider {
+  
+  &-wrp {
+    padding-left: 75px;
+    padding-right: 75px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &-slide {
+    width: 604px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &-next,
+  &-prev {
+    width: 55px;
+    height: 55px;
+    line-height: 53px;
+    border: 1px solid #FFF;
+    border-radius: 50%;
+    margin-top: -27px;
+    background-color: rgba(#FFF,.15);
+    color: #FFF;
+    transition: background .2s, color .2s;
+
+    &:after {
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: rgba(#FFF,.85);
+      color: $bg;
+    }
+  }
+  &-prev {
+    left: 0;
+  }
+  &-next {
+    right: 0;
+  }
+  &-icon {
+    position: absolute;
+    right: -35px;
+    top: -114px;
+    width: 150px;
+    transform: rotate(327deg);
+    z-index: -1;
+  }
+}
+
+.podcasts-card {
+  position: relative;
+
+  &-img {
+    display: block;
+    width: 100%;
+  }
+
+  &-play {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 84px;
+    height: 84px;
+    margin-top: -42px;
+    margin-left: -42px;
+    border-radius: 50%;
+    background: #FFF url(../images/svg/play.svg) 53% 50% no-repeat;
+    background-size: 30px;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.05)
+    }
+    &.playing {
+      background: #FFF url(../images/svg/pause.svg) 50% 50% no-repeat;
+      background-size: 36px;
+    }
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(#000,.2);
+  }
+}
+
+.swiper-slide-active {
+  .podcasts-card-play {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.podcasts-audio {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.podcasts-services {
+  text-align: center;
+
+  &-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 3px;
+  }
+  &-items {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    transition: opacity .2s;
+
+    &:nth-of-type(1) {
+      margin-right: 0;
+    }
+    &:nth-of-type(2) {
+      margin-right: 2px;
+    }
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
