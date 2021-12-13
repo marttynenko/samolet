@@ -179,11 +179,45 @@ jQuery(document).ready(function($){
 	})
 
 
-	$('#form_certificate').validate({
-		rules: {
-			mail: {
-				email: true,
-				required: true
+	
+
+
+	const swiperPodcasts = new Swiper(".podcasts-slider", {
+		effect: "coverflow",
+		grabCursor: true,
+		centeredSlides: true,
+		loop: true,
+		slidesPerView: "auto",
+		coverflowEffect: {
+			rotate: 0,
+			stretch: 100,
+			depth: 100,
+			scale: 0.85,
+			modifier: 1,
+			slideShadows: false,
+		},
+		navigation: {
+			nextEl: ".podcasts-slider-next",
+			prevEl: ".podcasts-slider-prev",
+		}
+	});
+
+
+	$(document).on('click','.podcasts-card-play',function(e){
+		e.preventDefault();
+		const src = $(this).attr('data-source') || null;
+		const player = $('#podcasts_audio').get(0);
+
+		if (src) {
+			player.src = src
+			// player.play()
+			
+			if ($(this).hasClass('playing')) {
+				player.pause()
+				$(this).removeClass('playing')
+			} else {
+				player.play()
+				$(this).addClass('playing')
 			}
 		}
 	})
