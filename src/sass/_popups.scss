@@ -5,7 +5,9 @@
 
 
 .mfp-popup {
-  background: $bg;
+  // background: $bg;
+  background: #FFF;
+  color: #000;
   position: relative;
   padding: 100px 50px 65px;
   min-height: 415px;
@@ -101,9 +103,10 @@
     position: relative;
     display: inline-block;
     padding-left: 24px;
+    color: #000;
     
     span {
-      border-bottom: 1px solid #FFF;
+      border-bottom: 1px solid #000;
     }
 
     &:before {
@@ -116,6 +119,14 @@
       background: url(../images/svg/charity.svg) center no-repeat;
       background-size: contain;
     }
+    &:hover {
+      color: #000;
+
+      span {
+        border-color: transparent;
+      }
+    }
+
   }
 }
 
@@ -131,6 +142,8 @@
     @include fz(30);
     text-transform: uppercase;
     color: #000;
+    border: 1px solid #E5EFFA;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.05);
   }
 }
 
@@ -195,7 +208,7 @@ button.mfp-close {
   width: 50px;
   height: 50px;
   min-width: 50px;
-  background-color: $bg2;
+  background-color: #000;
   border-radius: 50%;
   border: 0 !important;
   padding: 0 !important;
@@ -227,8 +240,10 @@ button.mfp-close {
     transform: rotate(-45deg);
   }
   &:hover {
+    background: $bg2;
+
     &:before, &:after {
-      background: #000;
+      // background: #000;
     }
     &:before {
       // @include transform(rotate(135deg));

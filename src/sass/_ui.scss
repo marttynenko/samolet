@@ -687,6 +687,23 @@ span.invalid {
 		padding: 0px 60px;
 	}
 
+	&-red {
+		background-color: #C61E2F;
+		border-color: #C61E2F;
+		color: #FFF;
+
+		&:hover {
+			background-color: lighten(#C61E2F,7%);
+			border-color: lighten(#C61E2F,7%);
+			color: #FFF;
+		}
+		&:active {
+			background-color: lighten(#C61E2F,12%);
+			border-color: lighten(#C61E2F,12%);
+			color: #FFF;
+		}
+	}
+
 	&-bordered {
 		background-color: transparent;
 		border: 1px solid $font;
@@ -897,50 +914,54 @@ span.invalid {
 	padding: 0;
 	margin: 20px 0;
 
-	&-bg {
-		display: inline-block;
-		background: #F1F0F2;
-		border-radius: 18px;
-		font-size: 0;
-	}
-
 	&-link,
 	&-current {
 		display: inline-block;
 		vertical-align: middle;
-		margin: 0px;
-		min-width: 60px;
-		height: 60px;
-		line-height: 60px;
+		margin: 0px 4px;
+		min-width: 40px;
+		height: 40px;
+		line-height: 40px;
 		text-align: center;
 		border: 0;
-		border-radius: 18px;
+		border-radius: 12px;
 		padding: 0px 5px;
 		font-weight: 400;
 		@include fz($fontsize);
 		transition: none;
 	}
 	&-link {
-		color: $font;
+		color: $bg2;
+		background: #FFF;
 
 		&:hover {
-			background-color: #000;
 			color: #FFF;
+			background: lighten($bg,7%);
 		}
 	}
 
 	&-current {
-		background-color: #000;
-		color: #FFF;
+		background-color: #FFF;
+		color: #000;
 		cursor: default;
 	}
 
-	@media (max-width: 360px) {
-		&-link,
-		&-current {
-			min-width: 52px;
-			height: 52px;
-			line-height: 52px;
+	&-btn {
+		display: inline-block;
+		vertical-align: middle;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		@include fz(14);
+		color: #FFF;
+		min-width: 128px;
+		margin: 0px 4px;
+		background: $bg;
+		border-radius: 12px;
+
+		&:hover {
+			color: #FFF;
+			background: lighten($bg,7%);
 		}
 	}
 }
