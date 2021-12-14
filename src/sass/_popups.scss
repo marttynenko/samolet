@@ -163,6 +163,19 @@
   }
 }
 
+
+.popup-upload {
+  max-width: 472px;
+  padding: 50px 25px;
+  text-align: left;
+
+  &-inner {
+    max-width: 310px;
+  }
+  .ui-btn {
+    width: 250px;
+  }
+}
   
 
 
@@ -172,8 +185,8 @@
 .mfp-bg {
   position: fixed !important;
   height: 100% !important;
-  background: rgba(#FFF, 0.99);
-  // backdrop-filter: blur(7px);
+  background: rgba($bg, 0.97);
+  backdrop-filter: blur(7px);
 }
 // .mfp-wrap {
 //   top: 0px !important;

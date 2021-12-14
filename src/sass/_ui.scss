@@ -799,7 +799,7 @@ span.invalid {
 
 	&-hint {
 		padding-top: 10px;
-		color: $font_2;
+		@include fz(12);
 	}
 }
 .ui-label {
@@ -1229,13 +1229,11 @@ span.invalid {
 	position: relative;
 	display: inline-block;
 	vertical-align: middle;
-	margin-right: 20px;
-	margin-bottom: 20px;
-	width: 80px;
-	height: 80px;
-	border: 2px solid #FFF;
-	overflow: hidden;
-	transition: background .2s;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #000;
+	@include fz(18);
+	margin-left: 32px;
+	transition: color .2s, border .2s;
 	// cursor: pointer;
 
 	input {
@@ -1249,24 +1247,37 @@ span.invalid {
 		cursor: pointer;
 	}
 	&:after {
-		content: "+";
+		content: "";
 		position: absolute;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		color: #FFF;
-		font-size: 32px;
-		text-align: center;
-		line-height: 76px;
-		transition: color .2s;
+		left: -32px;
+		top: 1px;
+		width: 23px;
+		height: 20px;
+		background: url(../images/svg/upload.svg) center no-repeat;
+		background-size: contain;
 	}
 	&:hover {
-		background: #FFF;
+		border-bottom-color: transparent;
+		color: $bg2;
+	}
 
-		&:after {
-			color: $primary;
+	span.invalid {
+		position: absolute;
+		top: 100%;
+		left: 0;
+	}
+	&-previews {
+		text-align: left;
+		@include fz(14);
+		font-weight: 400;
+
+		&:not(:empty) {
+			margin-bottom: 20px;
 		}
+	}
+	&-preview {
+		display: block;
+		margin-bottom: 5px;
 	}
 }
 .ui-files {
@@ -1985,4 +1996,36 @@ img.slick-loading {
 		color: $primary;
 		box-shadow: 0px 0px 13px rgba(0, 0, 0, 0.45);
 	}
+}
+
+.ui-video {
+	position: relative;
+	padding-bottom: 65%;
+	overflow: hidden;
+
+	video {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 101%;
+		height: 100%;
+		max-width: 101%;
+	}
+
+	&-play {
+		position: absolute;
+		width: 80px;
+		height: 80px;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+		border-radius: 50%;
+		background: #FFF url(../images/svg/play.svg) 54% 50% no-repeat;
+		background-size: 24px;
+		cursor: pointer;
+	}
+}
+
+video,object,iframe {
+	max-width: 100%;
 }

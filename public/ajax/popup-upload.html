@@ -1,0 +1,53 @@
+<div class="mfp-popup zoom-anim-dialog popup-upload">
+  <div class="mfp-popup-inner popup-upload-inner">
+    <div class="mfp-popup-header">
+      <div class="mfp-popup-title">Отправь свое фото или видео</div>
+    </div>
+    <form id="form_upload">
+      <div class="ui-field">
+        <label for="name" class="ui-field-label">Ваше имя</label>
+        <input type="text" name="name" placeholder="Введите свое имя" class="ui-input" required>
+      </div>
+
+      <div class="ui-field">
+        <label for="lastname" class="ui-field-label">Ваше фамилия</label>
+        <input type="text" name="lastname" placeholder="Введите свою фамилию" class="ui-input" required>
+      </div>
+
+      <div class="ui-field ui-field-upload ui-centered">
+        <div class="ui-uploader">
+          <input type="file" name="files" id="files" accept=".jpg,.jpeg,.png,.3gp,.mp4,.wmv,.mov" required>
+          <span class="ui-uploader-link">Прикрепить файл</span>
+        </div>
+        <div class="ui-uploader-previews"></div>
+
+        <div class="ui-field-hint ui-centered">Требования к загрузке файлов: Фото в форматах .jpg, .jpeg, .png, не более 2 мб. Видео в форматах 3gp, .mp4, .wmv, .mov, не более 200 мб.</div>
+      </div>
+
+      <div class="ui-field-btn ui-centered">
+        <button class="ui-btn ui-btn-red" type="submit">Загрузить</button>
+      </div>
+
+    </form>
+  </div>
+
+  <script>
+    function popupInit() {
+      $('form#form_upload').validate({
+        rules: {
+          name: {
+            lettersonly: true
+          },
+          lastname: {
+            lettersonly: true
+          },
+          files: {
+            required: true
+          }
+        }
+      });
+    }
+    
+    jQuery(document).ready(popupInit)
+  </script>
+</div>

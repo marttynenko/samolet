@@ -252,19 +252,37 @@ jQuery(document).ready(function($){
 		});
 		return false;
 	});
+
+	
+	$(document).on('click','.ui-video-play',function(e){
+		e.preventDefault();
+		const video = $(this).prev('video').get(0);
+		video.controls = true
+		video.play()
+		$(this).remove()
+	})
+
+
+	$(document).on('change','.ui-uploader input',function(e){
+		const previews = $(this).parent('.ui-uploader').next('.ui-uploader-previews');
+		if (e.target.files.length) {
+			previews.html('<strong>Выбранные файлы: </strong>'+fileParser(e.target.files))
+		} else {
+			previews.html('')
+		}
+	})
+
+	function fileParser(files) {
+		if (!files.length) return
+		let output = ''
+		for (let i=0; i<files.length; i++) {
+			output += `<div class="ui-uploader-preview">
+				<span class="ui-uploader-preview-name">${files[i].name}</span>
+				<span class="ui-uploader-preview-size">Размер: <strong>${(files[i].size / 1024 / 1024).toFixed(2)} Mb</strong></span>
+			</div>`
+		}
+		return output
+	}
 	
 
 });//ready close
-
-
-
-if (document.querySelector('.ux-share')) {
-	FARBA.lazyLibraryLoad(
-		'//yastatic.net/share2/share.js',
-		'',
-		() => {
-			var myShare = document.querySelector('.ux-share')
-			var share = Ya.share2(myShare)
-		}
-	)
-}

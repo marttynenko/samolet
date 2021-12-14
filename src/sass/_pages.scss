@@ -34,7 +34,7 @@
     @include fz(24);
     font-weight: 700;
     text-align: center;
-    text-transform: uppercase;
+    // text-transform: uppercase;
   }
   &-sticker {
     display: inline-block;
@@ -608,12 +608,12 @@
     margin-right: 4px;
     transition: opacity .2s;
 
-    &:nth-of-type(1) {
-      margin-right: 0;
-    }
-    &:nth-of-type(2) {
-      margin-right: 2px;
-    }
+    // &:nth-of-type(1) {
+    //   margin-right: 0;
+    // }
+    // &:nth-of-type(2) {
+    //   margin-right: 2px;
+    // }
 
     &:hover {
       opacity: 0.85;
@@ -758,6 +758,7 @@
 
 .histories {
   padding-top: 150px;
+  padding-bottom: 10px;
 
   &-header {
     margin-bottom: 110px;
@@ -772,15 +773,44 @@
 
 .histories-list {
   margin-bottom: 30px;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: -100px;
+    top: -40px;
+    width: 320px;
+    height: 136px;
+    border-radius: 70px;
+    background: $bg2;
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    left: -48px;
+    top: -60px;
+    width: 40px;
+    height: 40px;
+    background: url(../images/snowflake@2x.png) center no-repeat;
+    background-size: contain;
+    z-index: -1;
+  }
 }
 .histories-card {
   margin-bottom: 40px;
 
+  .ui-video {
+    margin-bottom: 15px;
+    background: #FFF;
+  }
   &-img {
     position: relative;
     padding-bottom: 65%;
     margin-bottom: 15px;
     overflow: hidden;
+    background: #FFF;
 
     iframe {
       position: absolute;
@@ -847,4 +877,96 @@
   padding: 20px 65px;
   margin-bottom: 110px;
   border-radius: 100px;
+}
+
+.histories-bottom {
+  text-align: center;
+  @include fz(24);
+
+  &-hint {
+    max-width: 1110px;
+    margin: 0 auto 90px;
+    font-weight: 500;
+  }
+}
+.histories-nominations {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  position: relative;
+
+  &-santa {
+    position: absolute;
+    z-index: -1;
+    bottom: 40px;
+    left: 0;
+    transform: translateX(-75%);
+  }
+  &-flakes {
+    position: absolute;
+    z-index: -1;
+    top: 30px;
+    right: -150px;
+  }
+
+  &-title {
+    margin-bottom: 50px;
+    font-weight: 500;
+  }
+
+  &-block {
+    padding: 60px 120px;
+    background: $bg2;
+    border-radius: 250px;
+    line-height: 1.25;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: left;
+    
+
+    &-circle {
+      flex: 0 0 50px;
+      max-width: 50px;
+      height: 50px;
+      line-height: 50px;
+      border-radius: 50%;
+      text-align: center;
+      background: #FFF;
+      color: $bg2;
+      @include fz(36);
+      margin-right: 20px;
+    }
+  }
+
+  &-total {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+
+    &-label {
+      padding-right: 25px;
+      @include fz(22);
+    }
+
+    &-date {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0px 35px;
+      background: #FFF;
+      height: 65px;
+      line-height: 65px;
+      white-space: nowrap;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      border-radius: 33px;
+      color: $bg2;
+      @include fz(26);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
 }
