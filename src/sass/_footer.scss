@@ -2,6 +2,11 @@ footer.footer {
   padding-top: 50px;
   padding-bottom: 70px;
   @include fz(16);
+
+  @media (max-width: 576px) {
+    @include fz(13);
+    padding-bottom: 40px;
+  }
 }
 
 .col-footer {
@@ -44,5 +49,9 @@ footer.footer {
     height: 34px;
     border-radius: 50%;
     background-color: #FFF;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 25px;
   }
 }

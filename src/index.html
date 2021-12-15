@@ -191,7 +191,8 @@
         $('form.to_wall_form').validate({
           rules: {
             msg: {
-              minlength: 25
+              minlength: 25,
+              maxlength: 245
             },
             name: {
               lettersonly: true
@@ -444,9 +445,13 @@
       <div class="row">
         <div class="col-sm-4 col-us-6">
           <div class="histories-card">
-            <div class="histories-card-img">
+            <a 
+              data-src="http://via.placeholder.com/800x500"
+              data-title="подпись к фото"
+              class="histories-card-img mfp-gallery"
+            >
               <img src="//via.placeholder.com/378x260" alt="alt" loading="lazy">
-            </div>
+            </a>
 
             <div class="histories-card-bottom">
               <div class="histories-card-author">Николай Петров</div>
@@ -461,10 +466,14 @@
         <div class="col-sm-4 col-us-6">
           <div class="histories-card">
             
-            <div class="ui-video">
+            <a
+              class="ui-video mfp-gallery"
+              data-video="./images/cloud.mp4"
+              data-title="подпись к видео"
+            >
               <video src="./images/cloud.mp4"></video>
               <div class="ui-video-play"></div>
-            </div>
+            </a>
 
 
             <div class="histories-card-bottom">

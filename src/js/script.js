@@ -131,55 +131,14 @@ const FARBA = {
 }
 
 
-const Store = {
-	files: [],
-	removeFile: function(index) {
-	  this.files.splice(index, 1);
-	},
-	addFiles: function(files) {
-	  this.files = this.files.concat(files);
-	},
-	readURL: function(e,input,block) {
-		const that = this;
-		if (!e.target.files.length) { return }
-	  const files = Object.keys(e.target.files).map((i) => e.target.files[i]);
-	  that.addFiles(files);
-
-	  for (var i = 0; i < that.files.length; i++) {
-			var reader = new FileReader();
-			$(block).find('.ui-files-preview').remove();
-			reader.onload = function (e) {
-				var image = document.createElement('img');
-				var span = document.createElement('span');
-				image.setAttribute('src',e.target.result);
-				span.setAttribute('class','ui-files-preview');
-				span.setAttribute('data-index',i);
-				span.appendChild(image);
-				$(span).append('<i class="ui-files-preview-delete"></i>');
-				$(block).append(span);
-			};
-			reader.readAsDataURL(that.files[i]);
-		}
-	  e.target.value = '';
-	},
-	generateFormData: function(formData) {
-		// const formData = new FormData();
-		this.files.map((file, index) => {
-				formData.append(`file${index + 1}`, file);
-		});
-		// return formData;
-	}
-}
-
-
 jQuery(document).ready(function($){
-	$('.gifts-slick').slick({
-		dots: true,
-		arrows: false
-	})
-
-
-	
+	if ($('.gifts-slick-slide').length > 1) {
+		$('.gifts-slick').slick({
+			dots: true,
+			arrows: false,
+			adaptiveHeight: true
+		})
+	}
 
 
 	const swiperPodcasts = new Swiper(".podcasts-slider", {
@@ -210,7 +169,6 @@ jQuery(document).ready(function($){
 
 		if (src) {
 			player.src = src
-			// player.play()
 			
 			if ($(this).hasClass('playing')) {
 				player.pause()
@@ -283,6 +241,46 @@ jQuery(document).ready(function($){
 		}
 		return output
 	}
+
+	
+	// $(document).on('click','.mfp-gallery',function(e){
+	// 	e.preventDefault()
+	// 	let slides = []
+	// 	$('.mfp-gallery').each(function(key,item){
+	// 		const source = $(item).attr('data-src') || null
+	// 		const video = $(item).attr('data-video') || null
+	// 		const title = $(item).attr('data-title') || 'Упс.. Кажется кто-то забыл указать подпись к файлу'
+	// 		let src
+	// 		if (source) {
+	// 			src = '<div class="mfp-custom-slide"><img class="mfp-custom-img" src="'+source+'" /><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
+	// 		}	else if (video) {
+	// 			src = '<div class="mfp-custom-slide"><video class="mfp-custom-video" controls src="'+video+'"></video><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
+	// 		}
+
+	// 		slides.push({
+	// 			src: src,
+	// 			type: 'inline'
+	// 		})
+	// 	})
+	// 	console.log(slides)
+
+	// 	$.magnificPopup.open({
+	// 		items: slides,
+	// 		gallery: {
+	// 			enabled: true,
+	// 		},
+	// 		type: 'inline',
+	// 	})
+	// })
+
+
+	$('header#header .navigation').after('<div class="mm-toggler" onclick=""><div class="mm-1"></div><div class="mm-2"></div><div class="mm-3"></div></div>')
+
+	$(document).on('click','.mm-toggler',function(e){
+		e.preventDefault()
+		$('header#header').toggleClass('nav-opened');
+		$(this).toggleClass('opened');
+	})
 	
 
 });//ready close

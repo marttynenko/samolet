@@ -1,11 +1,24 @@
-@media (max-width: 420px) {
-	h1, .h1 {
-		@include fz(30);
+// @media (max-width: 420px) {
+// 	h1, .h1 {
+// 		@include fz(30);
+// 	}
+// 	h2, .h2 {
+// 		@include fz(25);
+// 	}
+// 	h3, .h3 {
+// 		@include fz(22);
+// 	}
+// }
+
+@media (max-width: 992px) {
+	body {
+		@include fz(16);
 	}
-	h2, .h2 {
-		@include fz(25);
-	}
-	h3, .h3 {
-		@include fz(22);
+}
+
+
+@media (max-width: 480px) {
+	body {
+		@include fz(13);
 	}
 }
