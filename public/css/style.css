@@ -720,9 +720,9 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 @media (min-width: 768px) { .col-footer-socials { text-align: right; } }
 
-.footer-conditions { text-decoration: underline; -webkit-text-decoration-style: dotted; text-decoration-style: dotted; }
+.footer-conditions { border-bottom: 1px dotted rgba(255, 255, 255, 0.6); }
 
-.footer-conditions:hover { text-decoration: none; }
+.footer-conditions:hover { border-bottom-color: transparent; }
 
 .footer-socials { margin-top: -3px; }
 
@@ -1161,7 +1161,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .histories-bottom { text-align: center; font-size: 24px; font-size: 1.5rem; }
 
-.histories-bottom-hint { max-width: 1110px; margin: 0 auto 90px; font-weight: 500; }
+.histories-bottom-hint { max-width: 1110px; margin: 0 auto 90px; font-weight: 400; font-size: 22px; font-size: 1.375rem; }
 
 .histories-nominations { max-width: 750px; margin: 0 auto 50px; position: relative; }
 

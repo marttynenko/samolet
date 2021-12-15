@@ -23,11 +23,10 @@ footer.footer {
 }
 
 .footer-conditions {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+  border-bottom: 1px dotted rgba(#FFF,.6);
 
   &:hover {
-    text-decoration: none;
+    border-bottom-color: transparent;
   }
 }
 .footer-socials {
