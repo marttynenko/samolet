@@ -1929,7 +1929,7 @@ img.slick-loading {
 
 .ui-header {
 	margin-bottom: 60px;
-	@include fz(24);
+	@include fz(22);
 
 	&-title {
 		display: inline-block;
@@ -1946,7 +1946,7 @@ img.slick-loading {
 		}
 	}
 	&-txt {
-		font-weight: 500;
+		font-weight: 400;
 	}
 }
 .ui-title {
