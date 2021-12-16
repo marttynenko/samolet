@@ -279,9 +279,9 @@ button.mfp-close {
   &:hover {
     background: $bg2;
 
-    &:before, &:after {
-      // background: #000;
-    }
+    // &:before, &:after {
+    //   background: #000;
+    // }
     &:before {
       // @include transform(rotate(135deg));
       transform: rotate(135deg);
@@ -306,12 +306,12 @@ button.mfp-close {
   cursor: pointer;
 }
 .mfp-gallery .mfp-arrow {
-  display: none;
-  visibility: hidden;
-}
-.mfp-gallery button.mfp-close {
   // display: none;
+  // visibility: hidden;
 }
+// .mfp-gallery button.mfp-close {
+//   display: none;
+// }
 .mfp-gallery .mfp-close {
   width: 50px;
   height: 50px;
@@ -437,6 +437,12 @@ button.mfp-arrow {
     border-radius: 25px;
     border: 1px solid #FFF;
     z-index: 99;
+  }
+  &-prev {
+    left: 10px;
+  }
+  &-next {
+    right: 10px;
   }
 }
 

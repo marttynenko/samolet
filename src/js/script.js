@@ -181,10 +181,10 @@ jQuery(document).ready(function($){
 	})
 
 
-	$(document).on('click','.mfp-custom-close',function(e){
-		e.preventDefault();
-		$.magnificPopup.close();
-	});
+	// $(document).on('click','.mfp-custom-close',function(e){
+	// 	e.preventDefault();
+	// 	$.magnificPopup.close();
+	// });
    
 
 	//инициализация MFP popup для форм
@@ -266,11 +266,44 @@ jQuery(document).ready(function($){
 
 	// 	$.magnificPopup.open({
 	// 		items: slides,
+	// 		closeOnBgClick: false,
 	// 		gallery: {
 	// 			enabled: true,
 	// 		},
-	// 		type: 'inline',
 	// 	})
+	// })
+
+	// $(document).on('click','.mfp-gallery',function(e){
+	// 	const link = $(this)
+	// 	const source = link.attr('data-src') || null
+	// 	const video = link.attr('data-video') || null
+	// 	const title = link.attr('data-title') || 'Упс.. Кажется кто-то забыл указать подпись к файлу'
+
+	// 	let src
+	// 	if (source) {
+	// 			src = '<div class="mfp-custom-slide"><img class="mfp-custom-img" src="'+source+'" /><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
+	// 		}	else if (video) {
+	// 			src = '<div class="mfp-custom-slide"><video class="mfp-custom-video" controls src="'+video+'"></video><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
+	// 		}
+
+	// 	$.magnificPopup.open({
+	// 		items: {
+	// 			src: src,
+	// 			type: 'inline'
+	// 		}
+	// 	})
+	// })
+
+	
+
+
+	// $(document).on('click','.mfp-custom-prev',function(){
+	// 	$('.mfp-gallery').eq(0).click()
+	// })
+	// $(document).on('click','.mfp-custom-next',function(){
+	// 	// var magnificPopup = $.magnificPopup.instance;
+	// 	// magnificPopup.next()
+	// 	$.magnificPopup.instance.next()
 	// })
 
 
