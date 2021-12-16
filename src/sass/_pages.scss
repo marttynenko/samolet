@@ -178,16 +178,56 @@
       }
     }
 
-    &-label {
+    &-string {
+      display: flex;
+      justify-content: space-between;
       position: absolute;
       bottom: 10px;
-      left: Min(7%, 83px);
-      right: Min(7%, 83px);
+      left: Min(5%, 50px);
+      right: Min(5%, 50px);
+    }
+
+    &-label {
       background: $bg2;
       padding: 20px 40px;
       border-radius: 35px;
       @include fz(20);
       font-weight: 500;
+      width: 100%;
+    }
+    &-likes {
+      background: $bg2;
+      padding: 20px;
+      border-radius: 35px;
+      @include fz(20);
+      font-weight: 500;
+      white-space: nowrap;
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+
+      &-counter {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0px 8px;
+        margin-right: 7px;
+        height: 25px;
+        line-height: 21px;
+        border: 2px solid #FFF;
+        border-radius: 8px;
+        background: $bg2;
+      }
+      &-like {
+        position: relative;
+        z-index: 9;
+        top: -2px;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 24px;
+        background: url(../images/svg/like.svg) center no-repeat;
+        background-size: contain;
+      }
     }
 
     &-iconleft {
@@ -256,6 +296,13 @@
         @include fz(16);
         padding: 15px 30px;
       }
+      &-likes {
+        padding: 15px 20px;
+
+        &-counter {
+          @include fz(16);
+        }
+      }
     }
     
   }
@@ -284,12 +331,22 @@
 
     &-window {
       &-label {
+        @include fz(12);
+        padding: 8px 15px;
+      }
+      &-string {
         bottom: auto;
         top: 90%;
         left: 10px;
         right: 10px;
-        @include fz(12);
+      }
+      &-likes {
         padding: 8px 15px;
+        margin-left: 10px;
+
+        &-counter {
+          @include fz(13);
+        }
       }
 
       &-iconleft {
@@ -313,6 +370,33 @@
       }
     }
   }
+
+  @media (max-width: 480px) {
+    &-window {
+      &-label {
+        border-radius: 20px;
+      }
+      &-likes {
+        position: absolute;
+        padding: 8px 15px;
+        left: 0;
+        margin-left: 0;
+        bottom: 100%;
+        margin-bottom: 10px;
+
+        &-counter {
+          min-width: 35px;
+          @include fz(12);
+          height: 20px;
+          line-height: 16px;
+        }
+        &-like {
+          width: 28px;
+          height: 20px;
+        }
+      }
+    }
+  } 
 }
 
 
@@ -1162,6 +1246,11 @@
   }
   @media (max-width: 768px) {
     padding-top: 60px;
+  }
+  @media (max-width:576px) {
+    &-header {
+      margin-bottom: 30px;
+    }
   }
 }
 

@@ -1020,7 +1020,15 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .affirmations-window-img img { display: block; border-radius: 30px; }
 
-.affirmations-window-label { position: absolute; bottom: 10px; left: Min(7%, 83px); right: Min(7%, 83px); background: #9C292E; padding: 20px 40px; border-radius: 35px; font-size: 20px; font-size: 1.25rem; font-weight: 500; }
+.affirmations-window-string { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; position: absolute; bottom: 10px; left: Min(5%, 50px); right: Min(5%, 50px); }
+
+.affirmations-window-label { background: #9C292E; padding: 20px 40px; border-radius: 35px; font-size: 20px; font-size: 1.25rem; font-weight: 500; width: 100%; }
+
+.affirmations-window-likes { background: #9C292E; padding: 20px; border-radius: 35px; font-size: 20px; font-size: 1.25rem; font-weight: 500; white-space: nowrap; margin-left: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.affirmations-window-likes-counter { display: inline-block; vertical-align: middle; padding: 0px 8px; margin-right: 7px; height: 25px; line-height: 21px; border: 2px solid #FFF; border-radius: 8px; background: #9C292E; }
+
+.affirmations-window-likes-like { position: relative; z-index: 9; top: -2px; display: inline-block; vertical-align: middle; width: 30px; height: 24px; background: url(../images/svg/like.svg) center no-repeat; background-size: contain; }
 
 .affirmations-window-iconleft { position: absolute; left: -12%; top: -60px; width: 19%; }
 
@@ -1034,18 +1042,28 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 @media (max-width: 992px) { .affirmations-window-iconleft:after, .affirmations-window-iconright:after { height: 100px; }
   .affirmations-window-iconleft:after { width: 300px; left: -40px; }
-  .affirmations-window-label { font-size: 16px; font-size: 1rem; padding: 15px 30px; } }
+  .affirmations-window-label { font-size: 16px; font-size: 1rem; padding: 15px 30px; }
+  .affirmations-window-likes { padding: 15px 20px; }
+  .affirmations-window-likes-counter { font-size: 16px; font-size: 1rem; } }
 
 @media (max-width: 768px) { .affirmations { padding-top: 60px; }
   .affirmations-window { margin-left: 17px; margin-right: 15px; }
   .affirmations-title:after { width: 72px; height: 72px; top: -40px; right: -40px; } }
 
 @media (max-width: 576px) { .affirmations { padding-bottom: 80px; }
-  .affirmations-window-label { bottom: auto; top: 90%; left: 10px; right: 10px; font-size: 12px; font-size: 0.75rem; padding: 8px 15px; }
+  .affirmations-window-label { font-size: 12px; font-size: 0.75rem; padding: 8px 15px; }
+  .affirmations-window-string { bottom: auto; top: 90%; left: 10px; right: 10px; }
+  .affirmations-window-likes { padding: 8px 15px; margin-left: 10px; }
+  .affirmations-window-likes-counter { font-size: 13px; font-size: 0.8125rem; }
   .affirmations-window-iconleft { top: -20px; left: -10%; }
   .affirmations-window-iconleft:after { height: 70px; top: 10px; }
   .affirmations-window-iconright { left: 85%; -webkit-transform: rotate(5deg); -ms-transform: rotate(5deg); transform: rotate(5deg); bottom: 8px; }
   .affirmations-window-iconright:after { content: none; } }
+
+@media (max-width: 480px) { .affirmations-window-label { border-radius: 20px; }
+  .affirmations-window-likes { position: absolute; padding: 8px 15px; left: 0; margin-left: 0; bottom: 100%; margin-bottom: 10px; }
+  .affirmations-window-likes-counter { min-width: 35px; font-size: 12px; font-size: 0.75rem; height: 20px; line-height: 16px; }
+  .affirmations-window-likes-like { width: 28px; height: 20px; } }
 
 .wall { background-color: #9C292E; padding-top: 100px; padding-bottom: 110px; }
 
@@ -1293,6 +1311,8 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
   .histories-header-title { margin-bottom: 30px; } }
 
 @media (max-width: 768px) { .histories { padding-top: 60px; } }
+
+@media (max-width: 576px) { .histories-header { margin-bottom: 30px; } }
 
 .histories-list { margin-bottom: 30px; position: relative; }
 
