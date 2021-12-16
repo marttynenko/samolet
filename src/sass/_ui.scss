@@ -2089,6 +2089,11 @@ img.slick-loading {
 		background: #FFF url(../images/svg/play.svg) 54% 50% no-repeat;
 		background-size: 24px;
 		cursor: pointer;
+		transition: transform .3s;
+
+    &:hover {
+      transform: translate(-50%,-50%) scale(1.05);
+    }
 	}
 }
 

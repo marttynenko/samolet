@@ -162,30 +162,21 @@ jQuery(document).ready(function($){
 	});
 
 
+	swiperPodcasts.on('slideChange', function () {
+		$(".podcasts-slider iframe").remove();
+	});
+
+
 	$(document).on('click','.podcasts-card-play',function(e){
 		e.preventDefault();
-		const src = $(this).attr('data-source') || null;
-		const player = $('#podcasts_audio').get(0);
+		const id = $(this).attr('data-video') || null;
+		const card = $(this).closest('.podcasts-card');
 
-		if (src) {
-			player.src = src
-			
-			if ($(this).hasClass('playing')) {
-				player.pause()
-				$(this).removeClass('playing')
-			} else {
-				player.play()
-				$(this).addClass('playing')
-			}
+		if (id) {
+			card.append(`<iframe width="560" height="315" src="https://www.youtube.com/embed/${id}?autoplay=1" autoplay="1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
 		}
 	})
 
-
-	// $(document).on('click','.mfp-custom-close',function(e){
-	// 	e.preventDefault();
-	// 	$.magnificPopup.close();
-	// });
-   
 
 	//инициализация MFP popup для форм
 	$(document).on('click','.mfp-link',function(){

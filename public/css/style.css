@@ -715,7 +715,9 @@ img.slick-loading { opacity: 0; -webkit-transform: scale(0.95); -ms-transform: s
 
 .ui-video video { position: absolute; left: 0; top: 0; width: 101%; height: 100%; max-width: 101%; }
 
-.ui-video-play { position: absolute; width: 80px; height: 80px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 50%; background: #FFF url(../images/svg/play.svg) 54% 50% no-repeat; background-size: 24px; cursor: pointer; }
+.ui-video-play { position: absolute; width: 80px; height: 80px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 50%; background: #FFF url(../images/svg/play.svg) 54% 50% no-repeat; background-size: 24px; cursor: pointer; -webkit-transition: -webkit-transform .3s; transition: -webkit-transform .3s; -o-transition: transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
+
+.ui-video-play:hover { -webkit-transform: translate(-50%, -50%) scale(1.05); -ms-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }
 
 video, object, iframe { max-width: 100%; }
 
@@ -1042,7 +1044,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 @media (max-width: 992px) { .affirmations-window-iconleft:after, .affirmations-window-iconright:after { height: 100px; }
   .affirmations-window-iconleft:after { width: 300px; left: -40px; }
-  .affirmations-window-label { font-size: 16px; font-size: 1rem; padding: 15px 30px; }
+  .affirmations-window-label { font-size: 16px; font-size: 1rem; padding: 8px 30px; }
   .affirmations-window-likes-counter { font-size: 16px; font-size: 1rem; } }
 
 @media (max-width: 768px) { .affirmations { padding-top: 60px; }
@@ -1051,7 +1053,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 @media (max-width: 576px) { .affirmations { padding-bottom: 80px; }
   .affirmations-window-label { font-size: 12px; font-size: 0.75rem; padding: 8px 15px; }
-  .affirmations-window-string { bottom: auto; top: 90%; left: 10px; right: 10px; }
+  .affirmations-window-string { bottom: auto; top: 95%; left: 10px; right: 10px; }
   .affirmations-window-likes { margin-left: 15px; }
   .affirmations-window-likes-counter { font-size: 13px; font-size: 0.8125rem; }
   .affirmations-window-iconleft { top: -20px; left: -10%; }
@@ -1060,7 +1062,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
   .affirmations-window-iconright:after { content: none; } }
 
 @media (max-width: 480px) { .affirmations-window-label { border-radius: 20px; }
-  .affirmations-window-likes { position: absolute; left: 0; margin-left: 0; bottom: 100%; margin-bottom: 12px; }
+  .affirmations-window-likes { position: absolute; z-index: 1; padding: 6px 10px; background: #9C292E; right: 0; margin-left: 0; bottom: 100%; margin-bottom: 10px; border-radius: 14px; }
   .affirmations-window-likes-counter { min-width: 35px; font-size: 12px; font-size: 0.75rem; height: 20px; line-height: 16px; }
   .affirmations-window-likes-like { width: 28px; height: 20px; } }
 
@@ -1102,11 +1104,11 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .wall-card-who { font-size: 16px; font-size: 1rem; font-weight: 600; text-transform: uppercase; background: -webkit-linear-gradient(0deg, #569345, #2B5A1C); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-.wall-card-ghostleft { position: absolute; left: -100%; margin-left: -30px; top: 0; bottom: 0; width: 100%; height: 100%; background: #C61E2F url(../images/snowflake@2x.png) center no-repeat; background-size: auto 200px; border-radius: 200px; opacity: 0.5; overflow: hidden; }
+.wall-card-ghostleft { position: absolute; left: -100%; margin-left: -30px; top: 0; bottom: 0; width: 100%; height: 100%; background: #C61E2F url(../images/snowflake@2x.png) center no-repeat; background-size: auto 175px; border-radius: 200px; opacity: 0.5; overflow: hidden; }
 
 .wall-card-ghostleft:after { content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: -webkit-gradient(linear, right top, left top, from(rgba(198, 30, 47, 0.59)), to(#9c282e)); background: -o-linear-gradient(right, rgba(198, 30, 47, 0.59) 0%, #9c282e 100%); background: linear-gradient(270deg, rgba(198, 30, 47, 0.59) 0%, #9c282e 100%); }
 
-.wall-card-ghostright { position: absolute; right: -100%; margin-right: -30px; top: 0; bottom: 0; width: 100%; height: 100%; background: #C61E2F url(../images/snowflake@2x.png) center no-repeat; background-size: auto 200px; border-radius: 200px; overflow: hidden; }
+.wall-card-ghostright { position: absolute; right: -100%; margin-right: -30px; top: 0; bottom: 0; width: 100%; height: 100%; background: #C61E2F url(../images/snowflake@2x.png) center no-repeat; background-size: auto 175px; border-radius: 200px; overflow: hidden; }
 
 .wall-card-ghostright:after { content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; background: -webkit-gradient(linear, right top, left top, from(#9c282e), to(rgba(198, 30, 47, 0.59))); background: -o-linear-gradient(right, #9c282e 0%, rgba(198, 30, 47, 0.59) 100%); background: linear-gradient(270deg, #9c282e 0%, rgba(198, 30, 47, 0.59) 100%); }
 
@@ -1224,9 +1226,15 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
   .podcasts-slider-next, .podcasts-slider-prev { width: 25px; height: 25px; line-height: 23px; margin-top: -12px; }
   .podcasts-slider-next:after, .podcasts-slider-prev:after { font-size: 10px; } }
 
-.podcasts-card { position: relative; padding-bottom: 65%; }
+.podcasts-card { position: relative; padding-bottom: 65%; overflow: hidden; }
 
-.podcasts-card iframe { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.podcasts-card iframe { position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 2; }
+
+.podcasts-card-plug { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; max-width: 135%; }
+
+.podcasts-card-play { opacity: 0; visibility: hidden; position: absolute; width: 80px; height: 80px; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); border-radius: 50%; background: #FFF url(../images/svg/play.svg) 54% 50% no-repeat; background-size: 24px; cursor: pointer; z-index: 1; -webkit-transition: -webkit-transform .3s; transition: -webkit-transform .3s; -o-transition: transform .3s; transition: transform .3s; transition: transform .3s, -webkit-transform .3s; }
+
+.podcasts-card-play:hover { -webkit-transform: translate(-50%, -50%) scale(1.05); -ms-transform: translate(-50%, -50%) scale(1.05); transform: translate(-50%, -50%) scale(1.05); }
 
 .swiper-slide-active .podcasts-card-play { visibility: visible; opacity: 1; }
 
@@ -1311,7 +1319,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 @media (max-width: 576px) { .histories-header { margin-bottom: 30px; } }
 
-.histories-list { margin-bottom: 30px; position: relative; }
+.histories-list { margin-bottom: 30px; position: relative; z-index: 1; }
 
 .histories-list:before { content: ""; position: absolute; left: -100px; top: -40px; width: 320px; height: 136px; border-radius: 70px; background: #C61E2F; z-index: -1; }
 
