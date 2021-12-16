@@ -6,7 +6,7 @@ body { height: 100%; color: #FFF; font-family: "CoFo Sans", sans-serif; font-wei
 
 #wrapper.no-overflow { overflow: visible; }
 
-#middle { -moz-flex: 1 0 auto; -o-flex: 1 0 auto; -ms-flex: 1 0 auto; -webkit-box-flex: 1; flex: 1 0 auto; padding-bottom: 70px; }
+#middle { -moz-flex: 1 0 auto; -o-flex: 1 0 auto; -ms-flex: 1 0 auto; -webkit-box-flex: 1; flex: 1 0 auto; padding-bottom: 30px; }
 
 #footer { -moz-flex: 0 0 auto; -o-flex: 0 0 auto; -ms-flex: 0 0 auto; -webkit-box-flex: 0; flex: 0 0 auto; width: 100%; }
 
@@ -374,9 +374,9 @@ span.invalid { padding-top: 3px; }
 
 .ui-pgn-current { background-color: #FFF; color: #000; cursor: default; }
 
-.ui-pgn-btn { display: inline-block; vertical-align: middle; height: 40px; line-height: 40px; text-align: center; font-size: 14px; font-size: 0.875rem; color: #FFF; min-width: 128px; margin: 0px 4px; background: #C61E2F; border-radius: 12px; }
+.ui-pgn-btn { display: inline-block; vertical-align: middle; height: 40px; line-height: 40px; text-align: center; font-size: 14px; font-size: 0.875rem; color: #FFF; min-width: 128px; margin: 0px 4px; background: #9C292E; border-radius: 12px; }
 
-.ui-pgn-btn:hover { color: #FFF; background: #df293b; }
+.ui-pgn-btn:hover { color: #FFF; background: #b83036; }
 
 @media (max-width: 576px) { .ui-pgn-link, .ui-pgn-current, .ui-pgn-btn { font-size: 10px; font-size: 0.625rem; height: 22px; line-height: 22px; border-radius: 4px; }
   .ui-pgn-btn { min-width: 66px; margin: 0px 3px; }
@@ -1024,7 +1024,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .affirmations-window-label { background: #9C292E; padding: 20px 40px; border-radius: 35px; font-size: 20px; font-size: 1.25rem; font-weight: 500; width: 100%; }
 
-.affirmations-window-likes { background: #9C292E; padding: 20px; border-radius: 35px; font-size: 20px; font-size: 1.25rem; font-weight: 500; white-space: nowrap; margin-left: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+.affirmations-window-likes { border-radius: 35px; font-size: 20px; font-size: 1.25rem; font-weight: 500; white-space: nowrap; margin-left: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .affirmations-window-likes-counter { display: inline-block; vertical-align: middle; padding: 0px 8px; margin-right: 7px; height: 25px; line-height: 21px; border: 2px solid #FFF; border-radius: 8px; background: #9C292E; }
 
@@ -1043,7 +1043,6 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 @media (max-width: 992px) { .affirmations-window-iconleft:after, .affirmations-window-iconright:after { height: 100px; }
   .affirmations-window-iconleft:after { width: 300px; left: -40px; }
   .affirmations-window-label { font-size: 16px; font-size: 1rem; padding: 15px 30px; }
-  .affirmations-window-likes { padding: 15px 20px; }
   .affirmations-window-likes-counter { font-size: 16px; font-size: 1rem; } }
 
 @media (max-width: 768px) { .affirmations { padding-top: 60px; }
@@ -1053,7 +1052,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 @media (max-width: 576px) { .affirmations { padding-bottom: 80px; }
   .affirmations-window-label { font-size: 12px; font-size: 0.75rem; padding: 8px 15px; }
   .affirmations-window-string { bottom: auto; top: 90%; left: 10px; right: 10px; }
-  .affirmations-window-likes { padding: 8px 15px; margin-left: 10px; }
+  .affirmations-window-likes { margin-left: 15px; }
   .affirmations-window-likes-counter { font-size: 13px; font-size: 0.8125rem; }
   .affirmations-window-iconleft { top: -20px; left: -10%; }
   .affirmations-window-iconleft:after { height: 70px; top: 10px; }
@@ -1061,7 +1060,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
   .affirmations-window-iconright:after { content: none; } }
 
 @media (max-width: 480px) { .affirmations-window-label { border-radius: 20px; }
-  .affirmations-window-likes { position: absolute; padding: 8px 15px; left: 0; margin-left: 0; bottom: 100%; margin-bottom: 10px; }
+  .affirmations-window-likes { position: absolute; left: 0; margin-left: 0; bottom: 100%; margin-bottom: 12px; }
   .affirmations-window-likes-counter { min-width: 35px; font-size: 12px; font-size: 0.75rem; height: 20px; line-height: 16px; }
   .affirmations-window-likes-like { width: 28px; height: 20px; } }
 
@@ -1091,7 +1090,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .wall-card-front, .wall-card-back { -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 200px; }
 
-.wall-card-front { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #C61E2F url(../images/snowflake@2x.png) center no-repeat; background-size: auto 200px; }
+.wall-card-front { position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: #C61E2F url(../images/snowflake@2x.png) center no-repeat; background-size: auto 175px; }
 
 .wall-card-back { background: #FFF; -webkit-transform: rotateY(180deg); transform: rotateY(180deg); color: #000; padding: 70px 40px 55px 100px; min-height: 100%; }
 
@@ -1243,7 +1242,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .podcasts-services-item:hover { opacity: 0.85; }
 
-.covert { background: #9C292E; padding: 150px 0; }
+.covert { padding: 150px 0 100px; }
 
 .covert-header { max-width: 805px; margin-bottom: 75px; position: relative; z-index: 1; }
 
@@ -1251,9 +1250,9 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .covert-header-img { position: absolute; top: -20px; right: 0; max-width: 45%; }
 
-@media (max-width: 992px) { .covert { padding: 100px 0; } }
+@media (max-width: 992px) { .covert { padding: 100px 0 70px; } }
 
-@media (max-width: 768px) { .covert { padding: 60px 0; position: relative; }
+@media (max-width: 768px) { .covert { padding: 60px 0 40px; position: relative; }
   .covert-header { margin-bottom: 50px; }
   .covert-header-wrp { position: static; }
   .covert-header-img { top: 20px; right: -10px; } }
@@ -1276,13 +1275,13 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 @media (max-width: 768px) { .covert-steps-sock { left: 25px; max-width: 20vw; } }
 
-.covert-step { position: relative; padding: 40px 25px 60px; text-align: center; font-size: 22px; font-size: 1.375rem; border-top: 1px solid #C61E2F; }
+.covert-step { position: relative; padding: 40px 25px 60px; text-align: center; font-size: 22px; font-size: 1.375rem; border-top: 1px solid #9C292E; }
 
-.covert-step-index { position: absolute; z-index: 1; left: 50%; top: -25px; margin-left: -25px; width: 50px; height: 50px; line-height: 50px; text-align: center; background: #C61E2F; font-size: 36px; font-size: 2.25rem; border-radius: 25px; }
+.covert-step-index { position: absolute; z-index: 1; left: 50%; top: -25px; margin-left: -25px; width: 50px; height: 50px; line-height: 50px; text-align: center; background: #9C292E; font-size: 36px; font-size: 2.25rem; border-radius: 25px; }
 
-.covert-step-1:after, .covert-step-3:after, .covert-step-5:after { content: ""; position: absolute; right: -70px; top: -1px; bottom: -1px; width: 70px; border: 1px solid #C61E2F; border-left: 0; border-radius: 0px 150px 150px 0px; }
+.covert-step-1:after, .covert-step-3:after, .covert-step-5:after { content: ""; position: absolute; right: -70px; top: -1px; bottom: -1px; width: 70px; border: 1px solid #9C292E; border-left: 0; border-radius: 0px 150px 150px 0px; }
 
-.covert-step-2:after, .covert-step-4:after { content: ""; position: absolute; left: -70px; top: -1px; bottom: -1px; width: 70px; border: 1px solid #C61E2F; border-right: 0; border-radius: 150px 0 0 150px; }
+.covert-step-2:after, .covert-step-4:after { content: ""; position: absolute; left: -70px; top: -1px; bottom: -1px; width: 70px; border: 1px solid #9C292E; border-right: 0; border-radius: 150px 0 0 150px; }
 
 @media (max-width: 992px) { .covert-step { font-size: 18px; font-size: 1.125rem; } }
 
@@ -1300,23 +1299,21 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .covert-image-snowman img { max-width: none; }
 
-.histories { padding-top: 150px; padding-bottom: 10px; }
+.histories { padding-top: 150px; padding-bottom: 80px; background: #9C292E; }
 
-.histories-header { margin-bottom: 110px; text-align: center; }
-
-.histories-header-title { margin-bottom: 70px; margin-left: 0; }
+.histories-header-title { padding: 0; margin-left: 0; }
 
 @media (max-width: 992px) { .histories { padding-top: 100px; }
   .histories-header { margin-bottom: 60px; text-align: left; }
   .histories-header-title { margin-bottom: 30px; } }
 
-@media (max-width: 768px) { .histories { padding-top: 60px; } }
+@media (max-width: 768px) { .histories { padding-top: 60px; padding-bottom: 50px; } }
 
 @media (max-width: 576px) { .histories-header { margin-bottom: 30px; } }
 
 .histories-list { margin-bottom: 30px; position: relative; }
 
-.histories-list:before { content: ""; position: absolute; left: -100px; top: -40px; width: 320px; height: 136px; border-radius: 70px; background: #9C292E; z-index: -1; }
+.histories-list:before { content: ""; position: absolute; left: -100px; top: -40px; width: 320px; height: 136px; border-radius: 70px; background: #C61E2F; z-index: -1; }
 
 .histories-list:after { content: ""; position: absolute; left: -48px; top: -60px; width: 40px; height: 40px; background: url(../images/snowflake@2x.png) center no-repeat; background-size: contain; z-index: -1; }
 
@@ -1346,7 +1343,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
   .histories-card-likes-counter { min-width: 35px; font-size: 12px; font-size: 0.75rem; height: 20px; line-height: 16px; }
   .histories-card-likes-btn { width: 28px; height: 20px; } }
 
-.histories-pgn { background: #9C292E; padding: 20px 65px; margin-bottom: 110px; border-radius: 100px; }
+.histories-pgn { background: #C61E2F; padding: 20px 65px; margin-bottom: 110px; border-radius: 100px; }
 
 @media (max-width: 992px) { .histories-pgn { display: block; text-align: center; border-radius: 0; margin-left: -100px; margin-right: -100px; padding: 20px 10px 40px; margin-bottom: 60px; } }
 
@@ -1360,7 +1357,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 @media (max-width: 480px) { .histories-bottom { font-size: 13px; font-size: 0.8125rem; }
   .histories-bottom-hint { font-size: 13px; font-size: 0.8125rem; } }
 
-.histories-nominations { max-width: 750px; margin: 0 auto 50px; position: relative; }
+.histories-nominations { max-width: 750px; margin: 0 auto 50px; position: relative; z-index: 1; }
 
 .histories-nominations-santa { position: absolute; z-index: -1; bottom: 40px; left: 0; -webkit-transform: translateX(-75%); -ms-transform: translateX(-75%); transform: translateX(-75%); }
 
@@ -1368,7 +1365,7 @@ footer.footer { padding-top: 50px; padding-bottom: 70px; font-size: 16px; font-s
 
 .histories-nominations-title { margin-bottom: 50px; font-weight: 500; }
 
-.histories-nominations-block { padding: 60px 120px; background: #9C292E; border-radius: 250px; line-height: 1.25; }
+.histories-nominations-block { padding: 60px 120px; background: #C61E2F; border-radius: 250px; line-height: 1.25; }
 
 .histories-nominations-item { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 30px; text-align: left; }
 

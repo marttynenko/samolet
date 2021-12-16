@@ -962,12 +962,12 @@ span.invalid {
 		color: #FFF;
 		min-width: 128px;
 		margin: 0px 4px;
-		background: $bg;
+		background: $bg2;
 		border-radius: 12px;
 
 		&:hover {
 			color: #FFF;
-			background: lighten($bg,7%);
+			background: lighten($bg2,7%);
 		}
 	}
 

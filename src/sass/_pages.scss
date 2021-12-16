@@ -196,8 +196,8 @@
       width: 100%;
     }
     &-likes {
-      background: $bg2;
-      padding: 20px;
+      // background: $bg2;
+      // padding: 20px;
       border-radius: 35px;
       @include fz(20);
       font-weight: 500;
@@ -297,7 +297,7 @@
         padding: 15px 30px;
       }
       &-likes {
-        padding: 15px 20px;
+        // padding: 15px 20px;
 
         &-counter {
           @include fz(16);
@@ -341,8 +341,8 @@
         right: 10px;
       }
       &-likes {
-        padding: 8px 15px;
-        margin-left: 10px;
+        // padding: 8px 15px;
+        margin-left: 15px;
 
         &-counter {
           @include fz(13);
@@ -378,11 +378,11 @@
       }
       &-likes {
         position: absolute;
-        padding: 8px 15px;
+        // padding: 8px 15px;
         left: 0;
         margin-left: 0;
         bottom: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
 
         &-counter {
           min-width: 35px;
@@ -488,7 +488,7 @@
     width: 100%;
     height: 100%;
     background: #C61E2F url(../images/snowflake@2x.png) center no-repeat;
-    background-size: auto 200px;
+    background-size: auto 175px;
   }
 
   &-back {
@@ -1030,8 +1030,7 @@
 
 
 .covert {
-  background: $bg2;
-  padding: 150px 0;
+  padding: 150px 0 100px;
 
   &-header {
     max-width: 805px;
@@ -1051,10 +1050,10 @@
   }
   
   @media (max-width: 992px) {
-    padding: 100px 0;
+    padding: 100px 0 70px;
   }
   @media (max-width: 768px) {
-    padding: 60px 0;
+    padding: 60px 0 40px;
     position: relative;
 
     &-header {
@@ -1122,7 +1121,7 @@
   padding: 40px 25px 60px;
   text-align: center;
   @include fz(22);
-  border-top: 1px solid $bg;
+  border-top: 1px solid $bg2;
 
 
   &-index {
@@ -1135,7 +1134,7 @@
     height: 50px;
     line-height: 50px;
     text-align: center;
-    background: $bg;
+    background: $bg2;
     @include fz(36);
     border-radius: 25px;
   }
@@ -1150,7 +1149,7 @@
       top: -1px;
       bottom: -1px;
       width: 70px;
-      border: 1px solid $bg;
+      border: 1px solid $bg2;
       border-left: 0;
       border-radius: 0px 150px 150px 0px;
     }
@@ -1164,7 +1163,7 @@
       top: -1px;
       bottom: -1px;
       width: 70px;
-      border: 1px solid $bg;
+      border: 1px solid $bg2;
       border-right: 0;
       border-radius: 150px 0 0 150px;
     }
@@ -1220,14 +1219,16 @@
 
 .histories {
   padding-top: 150px;
-  padding-bottom: 10px;
+  padding-bottom: 80px;
+  background: $bg2;
 
   &-header {
-    margin-bottom: 110px;
-    text-align: center;
+    // margin-bottom: 110px;
+    // text-align: center;
 
     &-title {
-      margin-bottom: 70px;
+      // margin-bottom: 70px;
+      padding: 0;
       margin-left: 0;
     }
   }
@@ -1246,6 +1247,7 @@
   }
   @media (max-width: 768px) {
     padding-top: 60px;
+    padding-bottom: 50px;
   }
   @media (max-width:576px) {
     &-header {
@@ -1266,7 +1268,7 @@
     width: 320px;
     height: 136px;
     border-radius: 70px;
-    background: $bg2;
+    background: $bg;
     z-index: -1;
   }
   &:after {
@@ -1380,7 +1382,7 @@
 }
 
 .histories-pgn {
-  background: $bg2;
+  background: $bg;
   padding: 20px 65px;
   margin-bottom: 110px;
   border-radius: 100px;
@@ -1427,6 +1429,7 @@
   max-width: 750px;
   margin: 0 auto 50px;
   position: relative;
+  z-index: 1;
 
   &-santa {
     position: absolute;
@@ -1449,7 +1452,7 @@
 
   &-block {
     padding: 60px 120px;
-    background: $bg2;
+    background: $bg;
     border-radius: 250px;
     line-height: 1.25;
   }
