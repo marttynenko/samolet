@@ -275,6 +275,20 @@
     }
   }
 
+  @media (max-width:1340px) {
+    &-window {
+      &-string {
+        top: 100%;
+        bottom: auto;
+        margin-top: -60px;
+      }
+      &-likes {
+        display: block;
+        padding-top: 20px;
+      }
+    }
+  }
+
   
 
   @media (max-width: 992px) {
@@ -292,11 +306,15 @@
         }
       }
 
+      &-string {
+        margin-top: -44px;
+      }
       &-label {
         @include fz(16);
         padding: 8px 30px;
       }
       &-likes {
+        padding-top: 8px;
         // padding: 15px 20px;
 
         &-counter {
@@ -335,8 +353,8 @@
         padding: 8px 15px;
       }
       &-string {
-        bottom: auto;
-        top: 95%;
+        // bottom: auto;
+        // top: 95%;
         left: 10px;
         right: 10px;
       }
@@ -376,6 +394,9 @@
       &-label {
         border-radius: 20px;
       }
+      &-string {
+        margin-top: -10px;
+      }
       &-likes {
         position: absolute;
         z-index: 1;
@@ -384,7 +405,7 @@
         right: 0;
         margin-left: 0;
         bottom: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         border-radius: 14px;
 
         &-counter {
@@ -979,6 +1000,22 @@
       }
     }
   }
+
+  @media (max-width: 480px) {
+    &-wrp {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+    &-slide {
+      width: 68vw;
+    }
+    &-prev {
+      left: -5px;
+    }
+    &-next {
+      right: -5px;
+    }
+  }
 }
 
 .podcasts-card {
@@ -999,9 +1036,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 135%;
+    width: 100%;
   }
   &-play {
     opacity: 0;
@@ -1021,6 +1056,14 @@
 
     &:hover {
       transform: translate(-50%, -50%) scale(1.05);
+    }
+  }
+
+  @media (max-width: 576px) {
+    &-play {
+      width: 60px;
+      height: 60px;
+      background-size: 19px;
     }
   }
 }
@@ -1323,6 +1366,13 @@
       content: none;
     }
   }
+  @media (max-width: 768px) {
+    &:after {
+      left: auto;
+      right: 10px;
+      top: -122px;
+    }
+  }
 }
 .histories-card {
   margin-bottom: 40px;
@@ -1340,6 +1390,10 @@
     overflow: hidden;
     background: #FFF;
 
+    &.mfp-gallery {
+      cursor: pointer;
+    }
+
     iframe {
       position: absolute;
       left: 0;
@@ -1354,6 +1408,26 @@
       transform: translate(-50%,-50%);
       min-width: 100%;
       min-height: 100%;
+    }
+  }
+
+  &-play {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #FFF url(../images/svg/play.svg) 54% 50% no-repeat;
+    background-size: 24px;
+    cursor: pointer;
+    transition: transform .3s;
+
+    &:hover {
+      transform: scale(1.05);
     }
   }
 

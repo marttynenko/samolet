@@ -109,11 +109,11 @@ svg.svg-inline {
 /*---- ICONS ---- */
 
 ::selection {
-	background: $primary;
+	background: lighten($primary,10%);
 	color: #FFF;
 }
 ::-moz-selection {
-	background: $primary;
+	background: lighten($primary,10%);
 	color: #FFF;	
 }
 @media (min-width: 992px) {

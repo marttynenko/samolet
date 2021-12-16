@@ -92,6 +92,8 @@ jQuery.validator.addMethod("telephone", function(value, element) {
 
 
 const FARBA = {
+	galleryCurrentIndex: 0,
+
 	//функция для навешивания изображений фоном
 	backgrounded (selector) {
 		$(selector).each(function(){
@@ -205,10 +207,13 @@ jQuery(document).ready(function($){
 	
 	$(document).on('click','.ui-video-play',function(e){
 		e.preventDefault();
-		const video = $(this).prev('video').get(0);
-		video.controls = true
-		video.play()
-		$(this).remove()
+		const video = $(this).prev('video').get(0) || null;
+		if (video) {
+			video.controls = true
+			video.play()
+			$(this).remove()
+		}
+		return false;
 	})
 
 
@@ -234,68 +239,32 @@ jQuery(document).ready(function($){
 	}
 
 	
-	// $(document).on('click','.mfp-gallery',function(e){
-	// 	e.preventDefault()
-	// 	let slides = []
-	// 	$('.mfp-gallery').each(function(key,item){
-	// 		const source = $(item).attr('data-src') || null
-	// 		const video = $(item).attr('data-video') || null
-	// 		const title = $(item).attr('data-title') || 'Упс.. Кажется кто-то забыл указать подпись к файлу'
-	// 		let src
-	// 		if (source) {
-	// 			src = '<div class="mfp-custom-slide"><img class="mfp-custom-img" src="'+source+'" /><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
-	// 		}	else if (video) {
-	// 			src = '<div class="mfp-custom-slide"><video class="mfp-custom-video" controls src="'+video+'"></video><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
-	// 		}
+	$(document).on('click','.mfp-gallery',function(e){
+		e.preventDefault()
+		const _this = $(this)
 
-	// 		slides.push({
-	// 			src: src,
-	// 			type: 'inline'
-	// 		})
-	// 	})
-	// 	console.log(slides)
+		$.magnificPopup.open({
+			items: { src: _this.attr('data-href') },
+			type: 'ajax',    
+			overflowY: 'scroll',
+			removalDelay: 800,
+			mainClass: 'my-mfp-zoom-in',
+			ajax: {
+				tError: 'Error. Not valid url',
+			},
+			callbacks: {
+				ajaxContentAdded: function () {
+					setTimeout(function(){
+						$('.mfp-wrap, .mfp-bg').addClass('not_delay');
+						$('.mfp-popup').addClass('not_delay');
+					},700);
+				}
+			}
+		})
 
-	// 	$.magnificPopup.open({
-	// 		items: slides,
-	// 		closeOnBgClick: false,
-	// 		gallery: {
-	// 			enabled: true,
-	// 		},
-	// 	})
-	// })
-
-	// $(document).on('click','.mfp-gallery',function(e){
-	// 	const link = $(this)
-	// 	const source = link.attr('data-src') || null
-	// 	const video = link.attr('data-video') || null
-	// 	const title = link.attr('data-title') || 'Упс.. Кажется кто-то забыл указать подпись к файлу'
-
-	// 	let src
-	// 	if (source) {
-	// 			src = '<div class="mfp-custom-slide"><img class="mfp-custom-img" src="'+source+'" /><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
-	// 		}	else if (video) {
-	// 			src = '<div class="mfp-custom-slide"><video class="mfp-custom-video" controls src="'+video+'"></video><div class="mfp-custom-title">'+title+'</div><div class="mfp-custom-prev"></div><div class="mfp-custom-next"></div></div>'
-	// 		}
-
-	// 	$.magnificPopup.open({
-	// 		items: {
-	// 			src: src,
-	// 			type: 'inline'
-	// 		}
-	// 	})
-	// })
-
-	
-
-
-	// $(document).on('click','.mfp-custom-prev',function(){
-	// 	$('.mfp-gallery').eq(0).click()
-	// })
-	// $(document).on('click','.mfp-custom-next',function(){
-	// 	// var magnificPopup = $.magnificPopup.instance;
-	// 	// magnificPopup.next()
-	// 	$.magnificPopup.instance.next()
-	// })
+		FARBA.galleryCurrentIndex = $(this).closest('.col-us-6').index()
+		console.log(FARBA.galleryCurrentIndex)
+	});
 
 
 	$('header#header .navigation').after('<div class="mm-toggler" onclick=""><div class="mm-1"></div><div class="mm-2"></div><div class="mm-3"></div></div>')
