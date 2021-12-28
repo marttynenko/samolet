@@ -24,6 +24,7 @@ header.header {
 	margin-bottom: 40px;
 
 	&-link {
+		position: relative;
 		display: inline-block;
 		text-transform: lowercase;
 		@include fz(42);
@@ -34,6 +35,43 @@ header.header {
 		&:hover {
 			color: #FFF;
 			opacity: 0.7;
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			left: -45px;
+			top: -10px;
+			width: 26px;
+			height: 26px;
+			background: url(../images/snowflake.png) center no-repeat;
+			background-size: contain;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: -85px;
+			top: -10px;
+			width: 68px;
+			height: 90px;
+			background: url(../images/logo-tree.png) center no-repeat;
+			background-size: contain;
+		}
+
+		@media (max-width: 576px) {
+			&:before {
+				width: 15px;
+				height: 15px;
+				top: -10px;
+				left: 5px;
+			}
+			&:after {
+				width: 40px;
+				height: 65px;
+				right: -55px;
+				top: 2px;
+			}
 		}
 	}
 
@@ -65,6 +103,21 @@ header.header {
 		&:hover {
 			color: #FFF;
 			opacity: 0.7;
+		}
+	}
+	@media (min-width: 992px) {
+		position: relative;
+		z-index: 1;
+
+		&:after {
+			content: "";
+			position: absolute;
+			right: -20px;
+			top: -30px;
+			width: 50px;
+			height: 50px;
+			background: url(../images/snowflake.png) center no-repeat;
+			background-size: contain;
 		}
 	}
 	@media (max-width: 992px) {

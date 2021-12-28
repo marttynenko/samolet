@@ -1689,3 +1689,105 @@
     display: none;
   }
 }
+
+.to-air {
+  margin: 62px 0px 40px;
+  background: #FFF;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  &-body {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-santa {
+    width: 255px;
+    position: absolute;
+    top: -35px;
+    left: -50px;
+    z-index: -1;
+  }
+  &-leafs {
+    position: absolute;
+    top: -55px;
+    right: -50px;
+    z-index: -1;
+  }
+
+  &-appeal {
+    text-align: center;
+    line-height: 1.1;
+  }
+  &-title {
+    @include fz(48);
+    margin-bottom: 12px;
+    color: #000;
+  }
+  &-when {
+    @include fz(64);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: $primary;
+  }
+  &-btn {
+    .ui-btn {
+      width: 312px;
+    }
+  }
+
+  @media (max-width: 1315px) {
+    &-santa {
+      width: 205px;
+      left: -10px;
+    }
+    &-leafs {
+      width: 200px;
+      right: -20px;
+    }
+    &-title {
+      @include fz(40);
+    }
+    &-when {
+      @include fz(52);
+    }
+  }
+
+  @media (max-width: 992px) {
+    &-santa {
+      display: none;
+      white-space: nowrap;
+    }
+    &-leafs {
+      width: 150px;
+      right: -30px;
+      top: -95px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &-title {
+      @include fz(30);
+    }
+    &-when {
+      @include fz(42);
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-bottom: 30px;
+    
+    &-when {
+      font-size: 9.8vw;
+      margin-bottom: 18px;
+    }
+    &-btn {
+      .ui-btn {
+        width: auto;
+      }
+    }
+  }
+}
